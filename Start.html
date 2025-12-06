@@ -24,7 +24,6 @@
             position: relative;
         }
 
-        /* Matrix rain with numbers only */
         canvas {
             position: absolute;
             top: 0;
@@ -40,7 +39,6 @@
             z-index: 20;
         }
 
-        /* Pulsing white glow effect */
         .glow-ring {
             width: 350px;
             height: 350px;
@@ -135,7 +133,6 @@
     </div>
 
     <script>
-        // Pure Matrix rain with numbers only (0-9)
         const canvas = document.getElementById('matrix');
         const ctx = canvas.getContext('2d');
         
@@ -172,7 +169,6 @@
             canvas.height = window.innerHeight;
         });
 
-        // Typewriter functionality
         const typewriterElement = document.getElementById('typewriter');
         const proceedBtn = document.getElementById('proceedBtn');
         let currentLine = 0;
@@ -231,3 +227,4 @@
     </script>
 </body>
 </html>
+
