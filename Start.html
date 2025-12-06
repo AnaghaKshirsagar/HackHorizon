@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Financial Start</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Courier New', monospace;
+            background: #000;
+            color: #FFFFFF;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            position: relative;
+        }
+
+        /* Matrix rain with numbers only */
+        canvas {
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 1;
+        }
+
+        .container {
+            text-align: center;
+            max-width: 700px;
+            padding: 2rem;
+            position: relative;
+            z-index: 20;
+        }
+
+        /* Pulsing white glow effect */
+        .glow-ring {
+            width: 350px;
+            height: 350px;
+            border: 2px solid rgba(255,255,255,0.4);
+            border-radius: 50%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            animation: pulseGlow 3s ease-in-out infinite;
+            z-index: 5;
+        }
+
+        @keyframes pulseGlow {
+            0%, 100% { box-shadow: 0 0 20px rgba(255,255,255,0.3); transform: translate(-50%, -50%) scale(1); }
+            50% { box-shadow: 0 0 60px rgba(255,255,255,0.7); transform: translate(-50%, -50%) scale(1.1); }
+        }
+
+        .typing-text {
+            font-size: 2.5rem;
+            font-weight: 900;
+            line-height: 1.4;
+            color: #FFFFFF;
+            margin-bottom: 2rem;
+            text-shadow: 0 0 15px rgba(255,255,255,0.9);
+            position: relative;
+            z-index: 25;
+            letter-spacing: 1px;
+        }
+
+        .proceed-btn {
+            background: linear-gradient(145deg, #000 0%, #111 100%);
+            color: #FFFFFF;
+            border: 2px solid #FFFFFF;
+            padding: 1.2rem 3rem;
+            font-size: 1.3rem;
+            font-family: inherit;
+            font-weight: 900;
+            border-radius: 0;
+            cursor: pointer;
+            opacity: 0;
+            transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+            box-shadow: 0 0 20px rgba(255,255,255,0.3);
+            position: relative;
+            overflow: hidden;
+            z-index: 25;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .proceed-btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+            transition: left 0.5s;
+        }
+
+        .proceed-btn:hover::before {
+            left: 100%;
+        }
+
+        .proceed-btn.show {
+            opacity: 1;
+            transform: translateY(0) scale(1);
+        }
+
+        .proceed-btn:hover {
+            background: linear-gradient(145deg, #111 0%, #000 100%);
+            box-shadow: 0 0 40px rgba(255,255,255,0.8);
+            transform: translateY(-5px) scale(1.05);
+        }
+
+        @media (max-width: 768px) {
+            .typing-text { font-size: 2rem; }
+            .proceed-btn { padding: 1rem 2.5rem; font-size: 1.1rem; }
+            .glow-ring { width: 280px; height: 280px; }
+        }
+    </style>
+</head>
+<body>
+    <canvas id="matrix"></canvas>
+    
+    <div class="glow-ring"></div>
+
+    <div class="container">
+        <div class="typing-text" id="typewriter"></div>
+        <button class="proceed-btn" id="proceedBtn" onclick="proceed()">Proceed</button>
+    </div>
+
+    <script>
+        // Pure Matrix rain with numbers only (0-9)
+        const canvas = document.getElementById('matrix');
+        const ctx = canvas.getContext('2d');
+        
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+        
+        const numbers = '01234567890123456789';
+        const fontSize = 16;
+        const columns = canvas.width / fontSize;
+        const drops = Array(Math.floor(columns)).fill(1);
+        
+        function drawMatrix() {
+            ctx.fillStyle = 'rgba(0, 0, 0, 0.04)';
+            ctx.fillRect(0, 0, canvas.width, canvas.height);
+            
+            ctx.fillStyle = '#00FF00';
+            ctx.font = fontSize + 'px monospace';
+            
+            for (let i = 0; i < drops.length; i++) {
+                const text = numbers[Math.floor(Math.random() * numbers.length)];
+                ctx.fillText(text, i * fontSize, drops[i] * fontSize);
+                
+                if (drops[i] * fontSize > canvas.height && Math.random() > 0.975) {
+                    drops[i] = 0;
+                }
+                drops[i]++;
+            }
+        }
+        
+        setInterval(drawMatrix, 35);
+
+        window.addEventListener('resize', () => {
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+        });
+
+        // Typewriter functionality
+        const typewriterElement = document.getElementById('typewriter');
+        const proceedBtn = document.getElementById('proceedBtn');
+        let currentLine = 0;
+        let charIndex = 0;
+
+        const lines = [
+            "Struggling financially?",
+            "Let's Get you Started"
+        ];
+
+        function playTypeSound() {
+            const audioContext = new (window.AudioContext || window.webkitAudioContext)();
+            const oscillator = audioContext.createOscillator();
+            const gainNode = audioContext.createGain();
+            
+            oscillator.connect(gainNode);
+            gainNode.connect(audioContext.destination);
+            
+            oscillator.frequency.setValueAtTime(800, audioContext.currentTime);
+            oscillator.type = 'square';
+            
+            gainNode.gain.setValueAtTime(0.1, audioContext.currentTime);
+            gainNode.gain.exponentialRampToValueAtTime(0.01, audioContext.currentTime + 0.05);
+            
+            oscillator.start(audioContext.currentTime);
+            oscillator.stop(audioContext.currentTime + 0.05);
+        }
+
+        function typeWriter() {
+            if (currentLine < lines.length) {
+                if (charIndex < lines[currentLine].length) {
+                    typewriterElement.innerHTML += lines[currentLine].charAt(charIndex);
+                    playTypeSound();
+                    charIndex++;
+                    setTimeout(typeWriter, 80);
+                } else {
+                    charIndex = 0;
+                    currentLine++;
+                    typewriterElement.innerHTML += '<br>';
+                    setTimeout(typeWriter, 1000);
+                }
+            } else {
+                setTimeout(() => {
+                    proceedBtn.classList.add('show');
+                }, 500);
+            }
+        }
+
+        window.addEventListener('load', () => {
+            setTimeout(typeWriter, 300);
+        });
+
+        function proceed() {
+            alert('Redirecting to financial planning tools...');
+        }
+    </script>
+</body>
+</html>
