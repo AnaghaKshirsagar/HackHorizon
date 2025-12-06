@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hackhorizon Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+  <script type="module" src="firebase.js"></script>
+</head>
+<body class="dash-body">
+  <header class="nav">
+    <div class="nav-left">⚡ Hackhorizon</div>
+    <div class="nav-right">
+      <span id="user-email"></span>
+      <button id="dash-signout" class="glow-btn">🚪 Sign Out</button>
+    </div>
+  </header>
+
+  <section class="dash-header">
+    <h1 class="dash-title">Hackhorizon</h1>
+    <p class="dash-subtitle">Your collaborative workspace</p>
+    <hr class="dash-separator">
+  </section>
+
+
+  <main class="dash-main">
+    <section class="panel">
+      <h2>Panel A</h2>
+      <p>Use this for Whiteboard / Tasks / Forms later.</p>
+    </section>
+    <section class="panel">
+      <h2>Panel B</h2>
+      <p>Use this for Chat / Stats / Anything else.</p>
+    </section>
+  </main>
+
+  <script type="module">
+    import { auth, onAuthStateChanged, signOut } from './firebase.js';
+
+    const emailSpan = document.getElementById('user-email');
+    const signoutBtn = document.getElementById('dash-signout');
+
+    onAuthStateChanged(auth, user => {
+      if (!user) {
+        window.location.href = 'index.html';
+      } else {
+        emailSpan.textContent = user.email || user.displayName || 'User';
+      }
+    });
+
+    signoutBtn.onclick = () => signOut(auth);
+  </script>
+</body>
+</html>

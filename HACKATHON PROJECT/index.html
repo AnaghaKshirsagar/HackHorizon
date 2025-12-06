@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style.css">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hackhorizon</title>
+    <script type="module" src="firebase.js"></script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=B612:wght@400;700&display=swap" rel="stylesheet">
+
+
+    <style>
+
+body {
+    background: #fdf6e3; /* soft cream */
+    margin: 0;
+  }
+</style>
+
+</head>
+<body>
+    <h1 class="login-title">HACKHORIZON LOGIN</h1>
+
+<div id="auth-card">
+  <h3>Continue as guest or login</h3>
+
+  <div class="btn-row">
+    <button id="guest-btn" class="glow-btn secondary">👤 Continue as Guest</button>
+  </div>
+
+  <div class="btn-row">
+    <button id="signup-btn" class="glow-btn">🆕 Sign In with Google</button>
+    <button id="login-btn" class="glow-btn google">🔓 Login with Google</button>
+  </div>
+</div>
+
+<div id="status" style="display:none"></div>
+<button id="signout-btn" style="display:none">🚪 Sign Out</button>
+
+<p style="margin-top:12px; font-size:0.85rem; text-align:center;">
+  New here? <a href="signup.html">Create an account with email</a>
+</p>
+
+
+
+    <script type="module">
+  import {
+    auth,
+    GoogleAuthProvider,
+    signInWithPopup,
+    signInAnonymously,
+    onAuthStateChanged,
+    signOut
+  } from './firebase.js';
+
+  const guestBtn   = document.getElementById('guest-btn');
+  const signupBtn  = document.getElementById('signup-btn');
+  const loginBtn   = document.getElementById('login-btn');
+  const statusBox  = document.getElementById('status');
+  const authCard   = document.getElementById('auth-card');
+  const signoutBtn = document.getElementById('signout-btn');
+
+  // Guest user (anonymous)
+  guestBtn.onclick = async () => {
+    try {
+      await signInAnonymously(auth);
+    } catch (e) {
+      alert('Guest login failed: ' + e.message);
+    }
+  };
+
+  
+  const signInWithGoogle = async () => {
+    try {
+      await signInWithPopup(auth, new GoogleAuthProvider());
+    } catch (e) {
+      alert('Google login failed: ' + e.message);
+    }
+  };
+
+  signupBtn.onclick = signInWithGoogle;
+  loginBtn.onclick  = signInWithGoogle;
+
+  signoutBtn.onclick = () => signOut(auth);
+
+  onAuthStateChanged(auth, user => {
+    if (user) {
+      authCard.style.display   = 'none';
+      statusBox.style.display  = 'block';
+      signoutBtn.style.display = 'inline-block';
+      statusBox.textContent = user.isAnonymous
+        ? '✅ Welcome Guest! Redirecting...'
+        : `✅ Welcome ${user.email || user.displayName || 'User'}! Redirecting...`;
+
+      setTimeout(() => {
+        window.location.href = 'dashboard.html';
+      }, 800);
+    } else {
+      authCard.style.display   = 'block';
+      statusBox.style.display  = 'none';
+      signoutBtn.style.display = 'none';
+    }
+  });
+</script>
+
+
+
+</body>
+</html>

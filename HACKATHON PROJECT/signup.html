@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hackhorizon – Sign Up</title>
+  <link rel="stylesheet" href="style.css">
+  <script type="module" src="firebase.js"></script>
+</head>
+<body>
+  <h1 class="login-title">CREATE ACCOUNT</h1>
+
+  <div id="auth-card">
+    <h3>Sign up with Email</h3>
+
+    <label>Email</label><br>
+    <input id="su-email" type="email" placeholder="your@gmail.com"><br>
+
+    <label>Password</label><br>
+    <input id="su-password" type="password" placeholder="min 6 characters"><br><br>
+
+    <div class="btn-row">
+      <button id="su-create" class="glow-btn secondary">🆕 Create Account</button>
+      <button id="su-back" class="glow-btn">⬅ Back to Login</button>
+    </div>
+
+    <div id="su-status" style="margin-top:10px;font-size:0.9rem;"></div>
+  </div>
+
+  <script type="module">
+    import {
+      auth,
+      createUserWithEmailAndPassword,
+      onAuthStateChanged,
+      signOut
+    } from './firebase.js';
+
+    const emailInput = document.getElementById('su-email');
+    const passInput  = document.getElementById('su-password');
+    const createBtn  = document.getElementById('su-create');
+    const backBtn    = document.getElementById('su-back');
+    const statusBox  = document.getElementById('su-status');
+
+    createBtn.onclick = async () => {
+      const email = emailInput.value.trim();
+      const pass  = passInput.value.trim();
+      if (!email || !pass) {
+        statusBox.textContent = 'Please enter email and password.';
+        statusBox.style.color = '#b91c1c';
+        return;
+      }
+      try {
+        await createUserWithEmailAndPassword(auth, email, pass);
+        statusBox.textContent = '✅ Account created! Redirecting to dashboard...';
+        statusBox.style.color = '#166534';
+      } catch (e) {
+        statusBox.textContent = 'Sign up failed: ' + e.message;
+        statusBox.style.color = '#b91c1c';
+      }
+    };
+
+    backBtn.onclick = () => {
+      signOut(auth); // make sure no session stays
+      window.location.href = 'index.html';
+    };
+
+    onAuthStateChanged(auth, user => {
+      if (user) {
+        setTimeout(() => {
+          window.location.href = 'dashboard.html';
+        }, 800);
+      }
+    });
+  </script>
+</body>
+</html>
