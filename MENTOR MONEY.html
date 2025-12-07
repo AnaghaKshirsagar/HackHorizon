@@ -1,5 +1,7 @@
-<!DOCTYPE html>
+
+           <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -26,7 +28,11 @@
             --shadow: 0 10px 30px rgba(0, 0, 0, 0.45);
         }
 
-        * { margin: 0; padding: 0; box-sizing: border-box; }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
         body {
             font-family: 'Segoe UI', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
@@ -36,7 +42,11 @@
             overflow-x: hidden;
         }
 
-        .container { max-width: 1200px; margin: 0 auto; padding: var(--spacing-lg); }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: var(--spacing-lg);
+        }
 
         header {
             background: rgba(15, 23, 42, 0.98);
@@ -85,7 +95,7 @@
 
         .nav-btn:hover {
             border-color: var(--color-border);
-            background: rgba(15,23,42,0.95);
+            background: rgba(15, 23, 42, 0.95);
             color: var(--color-text);
         }
 
@@ -210,19 +220,40 @@
             font-weight: 600;
         }
 
-        .section { display: none; animation: fadeIn 0.35s ease; }
-        .section.active { display: block; }
-
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(6px); }
-            to { opacity: 1; transform: translateY(0); }
+        .section {
+            display: none;
+            animation: fadeIn 0.35s ease;
         }
 
-        h1 { font-size: 28px; margin-bottom: 8px; }
-        h2 { font-size: 20px; margin-bottom: 16px; color: var(--color-primary-light); }
+        .section.active {
+            display: block;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(6px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        h1 {
+            font-size: 28px;
+            margin-bottom: 8px;
+        }
+
+        h2 {
+            font-size: 20px;
+            margin-bottom: 16px;
+            color: var(--color-primary-light);
+        }
 
         .stat-card {
-            background: linear-gradient(135deg, rgba(15,23,42,0.96), rgba(30,64,175,0.18));
+            background: linear-gradient(135deg, rgba(15, 23, 42, 0.96), rgba(30, 64, 175, 0.18));
             border: 1px solid var(--color-border);
             border-radius: 16px;
             padding: var(--spacing-lg);
@@ -252,7 +283,7 @@
         }
 
         .quiz-card {
-            background: linear-gradient(135deg, rgba(15,23,42,0.96), rgba(129,140,248,0.2));
+            background: linear-gradient(135deg, rgba(15, 23, 42, 0.96), rgba(129, 140, 248, 0.2));
             border-radius: 18px;
             border: 1px solid var(--color-border);
             padding: var(--spacing-lg);
@@ -274,7 +305,7 @@
         .quiz-option {
             display: flex;
             align-items: center;
-            background: rgba(15,23,42,0.98);
+            background: rgba(15, 23, 42, 0.98);
             border-radius: 999px;
             border: 1px solid var(--color-border);
             padding: 8px 12px;
@@ -285,7 +316,7 @@
 
         .quiz-option:hover {
             border-color: var(--color-primary);
-            background: rgba(16,185,129,0.1);
+            background: rgba(16, 185, 129, 0.1);
             transform: translateY(-1px);
         }
 
@@ -309,7 +340,7 @@
         select {
             width: 100%;
             padding: 10px 12px;
-            background: rgba(15,23,42,0.95);
+            background: rgba(15, 23, 42, 0.95);
             border: 1px solid var(--color-border);
             border-radius: var(--radius);
             color: var(--color-text);
@@ -321,7 +352,7 @@
         select:focus {
             outline: none;
             border-color: var(--color-primary);
-            box-shadow: 0 0 12px rgba(0,168,107,0.4);
+            box-shadow: 0 0 12px rgba(0, 168, 107, 0.4);
         }
 
         .btn-primary {
@@ -339,7 +370,7 @@
 
         .btn-primary:hover {
             transform: translateY(-1px);
-            box-shadow: 0 14px 32px rgba(0,168,107,0.5);
+            box-shadow: 0 14px 32px rgba(0, 168, 107, 0.5);
         }
 
         .notification {
@@ -358,12 +389,19 @@
         }
 
         @keyframes slideIn {
-            from { transform: translateX(140%); opacity: 0; }
-            to { transform: translateX(0); opacity: 1; }
+            from {
+                transform: translateX(140%);
+                opacity: 0;
+            }
+
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
         }
 
         .ranking-display {
-            background: linear-gradient(135deg, rgba(245,158,11,0.1), rgba(102,126,234,0.1));
+            background: linear-gradient(135deg, rgba(245, 158, 11, 0.1), rgba(102, 126, 234, 0.1));
             border: 2px solid var(--color-accent);
             border-radius: 20px;
             padding: var(--spacing-xl);
@@ -386,7 +424,7 @@
         }
 
         .compare-section {
-            background: linear-gradient(135deg, rgba(15,23,42,0.96), rgba(102,126,234,0.1));
+            background: linear-gradient(135deg, rgba(15, 23, 42, 0.96), rgba(102, 126, 234, 0.1));
             border: 1px solid var(--color-border);
             border-radius: 16px;
             padding: var(--spacing-lg);
@@ -435,25 +473,25 @@
         }
 
         .status.good {
-            background: rgba(16,185,129,0.2);
+            background: rgba(16, 185, 129, 0.2);
             color: var(--color-success);
             border: 1px solid var(--color-success);
         }
 
         .status.warning {
-            background: rgba(245,158,11,0.2);
+            background: rgba(245, 158, 11, 0.2);
             color: var(--color-accent);
             border: 1px solid var(--color-accent);
         }
 
         .status.bad {
-            background: rgba(239,68,68,0.2);
+            background: rgba(239, 68, 68, 0.2);
             color: var(--color-warning);
             border: 1px solid var(--color-warning);
         }
 
         .profile-container {
-            background: linear-gradient(135deg, rgba(15,23,42,0.96), rgba(102,126,234,0.1));
+            background: linear-gradient(135deg, rgba(15, 23, 42, 0.96), rgba(102, 126, 234, 0.1));
             border: 1px solid var(--color-border);
             border-radius: 20px;
             padding: var(--spacing-xl);
@@ -474,7 +512,7 @@
         }
 
         .profile-info {
-            background: rgba(15,23,42,0.9);
+            background: rgba(15, 23, 42, 0.9);
             padding: var(--spacing-lg);
             border-radius: 12px;
             border: 1px solid var(--color-border);
@@ -511,7 +549,7 @@
         }
 
         .game-card {
-            background: linear-gradient(135deg, rgba(15,23,42,0.96), rgba(129,140,248,0.15));
+            background: linear-gradient(135deg, rgba(15, 23, 42, 0.96), rgba(129, 140, 248, 0.15));
             border: 1px solid var(--color-border);
             border-radius: 16px;
             padding: var(--spacing-lg);
@@ -527,7 +565,7 @@
             transform: translateY(-8px);
             border-color: var(--color-primary);
             box-shadow: 0 20px 50px rgba(0, 168, 107, 0.3);
-            background: linear-gradient(135deg, rgba(30,64,175,0.2), rgba(129,140,248,0.25));
+            background: linear-gradient(135deg, rgba(30, 64, 175, 0.2), rgba(129, 140, 248, 0.25));
         }
 
         .game-icon {
@@ -576,7 +614,7 @@
             transform: translate(-50%, -50%);
             width: 90%;
             max-width: 500px;
-            background: linear-gradient(135deg, rgba(15,23,42,0.98), rgba(30,64,175,0.15));
+            background: linear-gradient(135deg, rgba(15, 23, 42, 0.98), rgba(30, 64, 175, 0.15));
             border: 1px solid var(--color-border);
             border-radius: 20px;
             box-shadow: 0 30px 60px rgba(0, 168, 107, 0.25);
@@ -616,6 +654,7 @@
                 opacity: 0;
                 transform: translate(-50%, -50%) scale(0.9);
             }
+
             to {
                 opacity: 1;
                 transform: translate(-50%, -50%) scale(1);
@@ -623,7 +662,7 @@
         }
 
         /* Savings Priority Game Styling */
-        .sp-game-section { }
+
 
         .sp-game-title {
             font-size: 24px;
@@ -633,7 +672,7 @@
         }
 
         .sp-income-input {
-            background: rgba(15,23,42,0.9);
+            background: rgba(15, 23, 42, 0.9);
             padding: var(--spacing-lg);
             border-radius: 12px;
             border: 1px solid var(--color-border);
@@ -692,7 +731,7 @@
         }
 
         .sp-priority-wants {
-            background: rgba(15,23,42,0.9);
+            background: rgba(15, 23, 42, 0.9);
             padding: var(--spacing-lg);
             border-radius: 12px;
             border: 1px solid var(--color-border);
@@ -707,7 +746,7 @@
         }
 
         .sp-shopping-list {
-            background: rgba(15,23,42,0.9);
+            background: rgba(15, 23, 42, 0.9);
             padding: var(--spacing-lg);
             border-radius: 12px;
             border: 1px solid var(--color-border);
@@ -759,7 +798,7 @@
             display: flex;
             justify-content: space-between;
             padding: var(--spacing-md);
-            background: rgba(0,168,107,0.1);
+            background: rgba(0, 168, 107, 0.1);
             border-radius: 8px;
             font-weight: 600;
             margin-top: var(--spacing-md);
@@ -807,14 +846,30 @@
         }
 
         @media (max-width: 768px) {
-            nav ul { gap: 8px; }
-            .nav-btn { padding: 4px 8px; font-size: 12px; }
-            .chatbot-modal { width: 90vw; }
-            .games-grid { grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); }
-            .sp-split-container { grid-template-columns: 1fr; }
+            nav ul {
+                gap: 8px;
+            }
+
+            .nav-btn {
+                padding: 4px 8px;
+                font-size: 12px;
+            }
+
+            .chatbot-modal {
+                width: 90vw;
+            }
+
+            .games-grid {
+                grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            }
+
+            .sp-split-container {
+                grid-template-columns: 1fr;
+            }
         }
     </style>
 </head>
+
 <body>
     <header>
         <div class="container">
@@ -825,14 +880,12 @@
                     <li><button class="nav-btn" data-section="survey">Survey</button></li>
                     <li><button class="nav-btn" data-section="games">Games</button></li>
                     <li><button class="nav-btn" data-section="study">Study</button></li>
+                    <li><button class="nav-btn" data-section="connections">Connection</button></li>
+
                     <li><button class="nav-btn" data-section="daily">Daily Spend</button></li>
                     <li><button class="nav-btn" data-section="compare">Compare</button></li>
                     <li><button class="nav-btn" data-section="profile">Profile</button></li>
-                    <li><button class="nav-btn" data-section="games">Games</button></li>
-                    <li><button class="nav-btn" data-section="study">Study</button></li>
-                    <li><button class="nav-btn" data-section="daily">Daily Spend</button></li>
-                    <li><button class="nav-btn" data-section="compare">Compare</button></li>
-                    <li><button class="nav-btn" data-section="profile">Profile</button></li>
+
                 </ul>
             </nav>
         </div>
@@ -842,170 +895,251 @@
         <!-- DASHBOARD SECTION -->
         <section id="dashboard" class="section active">
             <h1>🎯 Welcome to Money Mentor</h1>
-            <p style="color: var(--color-text-secondary); margin-bottom: var(--spacing-xl);">Master your finances with smart insights and expert guidance</p>
+            <p style="color: var(--color-text-secondary); margin-bottom: var(--spacing-xl);">Master your finances with
+                smart insights and expert guidance</p>
 
             <!-- Feature Cards -->
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: var(--spacing-lg); margin-bottom: var(--spacing-xl);">
+            <div
+                style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: var(--spacing-lg); margin-bottom: var(--spacing-xl);">
                 <!-- Survey Feature -->
                 <div class="stat-card" style="cursor: pointer; text-align: center;" onclick="switchSection('survey')">
                     <div style="font-size: 48px; margin-bottom: var(--spacing-md);">💡</div>
-                    <h3 style="color: var(--color-primary-light); margin-bottom: var(--spacing-sm);">Financial Survey</h3>
-                    <p style="color: var(--color-text-secondary); font-size: 13px; line-height: 1.6;">Answer 20 smart questions to assess your financial knowledge and get personalized ranking with detailed feedback.</p>
-                    <button class="btn-primary" style="margin-top: var(--spacing-md); padding: 8px 16px; font-size: 12px;">Start Survey →</button>
+                    <h3 style="color: var(--color-primary-light); margin-bottom: var(--spacing-sm);">Financial Survey
+                    </h3>
+                    <p style="color: var(--color-text-secondary); font-size: 13px; line-height: 1.6;">Answer 20 smart
+                        questions to assess your financial knowledge and get personalized ranking with detailed
+                        feedback.</p>
+                    <button class="btn-primary"
+                        style="margin-top: var(--spacing-md); padding: 8px 16px; font-size: 12px;">Start Survey
+                        →</button>
                 </div>
 
                 <!-- Daily Spend Feature -->
                 <div class="stat-card" style="cursor: pointer; text-align: center;" onclick="switchSection('daily')">
                     <div style="font-size: 48px; margin-bottom: var(--spacing-md);">📊</div>
                     <h3 style="color: var(--color-primary-light); margin-bottom: var(--spacing-sm);">Daily Tracker</h3>
-                    <p style="color: var(--color-text-secondary); font-size: 13px; line-height: 1.6;">Track your expenses in 5 categories - Food, Transport, Entertainment, Shopping, and Other items daily.</p>
-                    <button class="btn-primary" style="margin-top: var(--spacing-md); padding: 8px 16px; font-size: 12px;">Track Now →</button>
+                    <p style="color: var(--color-text-secondary); font-size: 13px; line-height: 1.6;">Track your
+                        expenses in 5 categories - Food, Transport, Entertainment, Shopping, and Other items daily.</p>
+                    <button class="btn-primary"
+                        style="margin-top: var(--spacing-md); padding: 8px 16px; font-size: 12px;">Track Now →</button>
                 </div>
 
                 <!-- Compare Feature -->
                 <div class="stat-card" style="cursor: pointer; text-align: center;" onclick="switchSection('compare')">
                     <div style="font-size: 48px; margin-bottom: var(--spacing-md);">📈</div>
                     <h3 style="color: var(--color-primary-light); margin-bottom: var(--spacing-sm);">Smart Compare</h3>
-                    <p style="color: var(--color-text-secondary); font-size: 13px; line-height: 1.6;">Compare your spending against ideal budgets for 6 major Indian cities and get personalized recommendations.</p>
-                    <button class="btn-primary" style="margin-top: var(--spacing-md); padding: 8px 16px; font-size: 12px;">Compare →</button>
+                    <p style="color: var(--color-text-secondary); font-size: 13px; line-height: 1.6;">Compare your
+                        spending against ideal budgets for 6 major Indian cities and get personalized recommendations.
+                    </p>
+                    <button class="btn-primary"
+                        style="margin-top: var(--spacing-md); padding: 8px 16px; font-size: 12px;">Compare →</button>
                 </div>
 
                 <!-- Profile Feature -->
                 <div class="stat-card" style="cursor: pointer; text-align: center;" onclick="switchSection('profile')">
                     <div style="font-size: 48px; margin-bottom: var(--spacing-md);">👤</div>
                     <h3 style="color: var(--color-primary-light); margin-bottom: var(--spacing-sm);">Your Profile</h3>
-                    <p style="color: var(--color-text-secondary); font-size: 13px; line-height: 1.6;">View your financial dashboard with survey score, ranking, daily budget, and selected city information.</p>
-                    <button class="btn-primary" style="margin-top: var(--spacing-md); padding: 8px 16px; font-size: 12px;">View Profile →</button>
+                    <p style="color: var(--color-text-secondary); font-size: 13px; line-height: 1.6;">View your
+                        financial dashboard with survey score, ranking, daily budget, and selected city information.</p>
+                    <button class="btn-primary"
+                        style="margin-top: var(--spacing-md); padding: 8px 16px; font-size: 12px;">View Profile
+                        →</button>
                 </div>
 
                 <!-- AI Chatbot Feature -->
                 <div class="stat-card" style="cursor: pointer; text-align: center;">
                     <div style="font-size: 48px; margin-bottom: var(--spacing-md);">💬</div>
                     <h3 style="color: var(--color-primary-light); margin-bottom: var(--spacing-sm);">AI Assistant</h3>
-                    <p style="color: var(--color-text-secondary); font-size: 13px; line-height: 1.6;">Chat with Money Mentor AI for budgeting tips, UPI safety, financial advice, and smart money management guidance.</p>
-                    <button class="btn-primary" style="margin-top: var(--spacing-md); padding: 8px 16px; font-size: 12px;" onclick="toggleChatbot()">Chat Now →</button>
+                    <p style="color: var(--color-text-secondary); font-size: 13px; line-height: 1.6;">Chat with Money
+                        Mentor AI for budgeting tips, UPI safety, financial advice, and smart money management guidance.
+                    </p>
+                    <button class="btn-primary"
+                        style="margin-top: var(--spacing-md); padding: 8px 16px; font-size: 12px;"
+                        onclick="toggleChatbot()">Chat Now →</button>
                 </div>
 
                 <!-- Cities Feature -->
                 <div class="stat-card" style="cursor: pointer; text-align: center;">
                     <div style="font-size: 48px; margin-bottom: var(--spacing-md);">🏙️</div>
                     <h3 style="color: var(--color-primary-light); margin-bottom: var(--spacing-sm);">6 Major Cities</h3>
-                    <p style="color: var(--color-text-secondary); font-size: 13px; line-height: 1.6;">Supported cities: Delhi, Mumbai, Bangalore, Hyderabad, Pune, Chennai with city-specific budget standards.</p>
-                    <div style="margin-top: var(--spacing-md); display: flex; flex-wrap: wrap; gap: 6px; justify-content: center;">
-                        <span style="background: rgba(0,168,107,0.2); color: var(--color-primary); padding: 4px 12px; border-radius: 999px; font-size: 11px;">Delhi</span>
-                        <span style="background: rgba(0,168,107,0.2); color: var(--color-primary); padding: 4px 12px; border-radius: 999px; font-size: 11px;">Mumbai</span>
-                        <span style="background: rgba(0,168,107,0.2); color: var(--color-primary); padding: 4px 12px; border-radius: 999px; font-size: 11px;">Bangalore</span>
+                    <p style="color: var(--color-text-secondary); font-size: 13px; line-height: 1.6;">Supported cities:
+                        Delhi, Mumbai, Bangalore, Hyderabad, Pune, Chennai with city-specific budget standards.</p>
+                    <div
+                        style="margin-top: var(--spacing-md); display: flex; flex-wrap: wrap; gap: 6px; justify-content: center;">
+                        <span
+                            style="background: rgba(0,168,107,0.2); color: var(--color-primary); padding: 4px 12px; border-radius: 999px; font-size: 11px;">Delhi</span>
+                        <span
+                            style="background: rgba(0,168,107,0.2); color: var(--color-primary); padding: 4px 12px; border-radius: 999px; font-size: 11px;">Mumbai</span>
+                        <span
+                            style="background: rgba(0,168,107,0.2); color: var(--color-primary); padding: 4px 12px; border-radius: 999px; font-size: 11px;">Bangalore</span>
                     </div>
                 </div>
             </div>
 
             <!-- Stats Section -->
             <div class="compare-section">
-                <h2 style="color: var(--color-primary-light); margin-bottom: var(--spacing-lg);">📋 About Money Mentor</h2>
-                
-                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: var(--spacing-lg); margin-bottom: var(--spacing-lg);">
-                    <div style="background: rgba(0,168,107,0.1); padding: var(--spacing-lg); border-radius: 12px; border-left: 4px solid var(--color-primary);">
-                        <div style="font-size: 32px; font-weight: 700; color: var(--color-accent); margin-bottom: 8px;">20</div>
+                <h2 style="color: var(--color-primary-light); margin-bottom: var(--spacing-lg);">📋 About Money Mentor
+                </h2>
+
+                <div
+                    style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: var(--spacing-lg); margin-bottom: var(--spacing-lg);">
+                    <div
+                        style="background: rgba(0,168,107,0.1); padding: var(--spacing-lg); border-radius: 12px; border-left: 4px solid var(--color-primary);">
+                        <div style="font-size: 32px; font-weight: 700; color: var(--color-accent); margin-bottom: 8px;">
+                            20</div>
                         <div style="color: var(--color-text-secondary);">Smart Survey Questions</div>
-                        <div style="font-size: 12px; color: var(--color-text-secondary); margin-top: 8px;">10 MCQs + 10 Real-life What-If Scenarios</div>
+                        <div style="font-size: 12px; color: var(--color-text-secondary); margin-top: 8px;">10 MCQs + 10
+                            Real-life What-If Scenarios</div>
                     </div>
 
-                    <div style="background: rgba(102,126,234,0.1); padding: var(--spacing-lg); border-radius: 12px; border-left: 4px solid var(--color-secondary);">
-                        <div style="font-size: 32px; font-weight: 700; color: var(--color-accent); margin-bottom: 8px;">5</div>
+                    <div
+                        style="background: rgba(102,126,234,0.1); padding: var(--spacing-lg); border-radius: 12px; border-left: 4px solid var(--color-secondary);">
+                        <div style="font-size: 32px; font-weight: 700; color: var(--color-accent); margin-bottom: 8px;">
+                            5</div>
                         <div style="color: var(--color-text-secondary);">Spending Categories</div>
-                        <div style="font-size: 12px; color: var(--color-text-secondary); margin-top: 8px;">Food, Transport, Entertainment, Shopping, Other</div>
+                        <div style="font-size: 12px; color: var(--color-text-secondary); margin-top: 8px;">Food,
+                            Transport, Entertainment, Shopping, Other</div>
                     </div>
 
-                    <div style="background: rgba(245,158,11,0.1); padding: var(--spacing-lg); border-radius: 12px; border-left: 4px solid var(--color-accent);">
-                        <div style="font-size: 32px; font-weight: 700; color: var(--color-accent); margin-bottom: 8px;">6</div>
+                    <div
+                        style="background: rgba(245,158,11,0.1); padding: var(--spacing-lg); border-radius: 12px; border-left: 4px solid var(--color-accent);">
+                        <div style="font-size: 32px; font-weight: 700; color: var(--color-accent); margin-bottom: 8px;">
+                            6</div>
                         <div style="color: var(--color-text-secondary);">Indian Cities Supported</div>
-                        <div style="font-size: 12px; color: var(--color-text-secondary); margin-top: 8px;">With city-specific ideal budgets</div>
+                        <div style="font-size: 12px; color: var(--color-text-secondary); margin-top: 8px;">With
+                            city-specific ideal budgets</div>
                     </div>
 
-                    <div style="background: rgba(16,185,129,0.1); padding: var(--spacing-lg); border-radius: 12px; border-left: 4px solid var(--color-success);">
-                        <div style="font-size: 32px; font-weight: 700; color: var(--color-accent); margin-bottom: 8px;">6</div>
+                    <div
+                        style="background: rgba(16,185,129,0.1); padding: var(--spacing-lg); border-radius: 12px; border-left: 4px solid var(--color-success);">
+                        <div style="font-size: 32px; font-weight: 700; color: var(--color-accent); margin-bottom: 8px;">
+                            6</div>
                         <div style="color: var(--color-text-secondary);">Ranking Tiers</div>
-                        <div style="font-size: 12px; color: var(--color-text-secondary); margin-top: 8px;">From Beginner to Financial Genius</div>
+                        <div style="font-size: 12px; color: var(--color-text-secondary); margin-top: 8px;">From Beginner
+                            to Financial Genius</div>
                     </div>
                 </div>
 
-                <h3 style="color: var(--color-primary-light); margin: var(--spacing-lg) 0 var(--spacing-md);">🎯 How to Use Money Mentor</h3>
-                
-                <div style="background: rgba(15,23,42,0.9); padding: var(--spacing-lg); border-radius: 12px; border: 1px solid var(--color-border);">
-                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: var(--spacing-lg);">
+                <h3 style="color: var(--color-primary-light); margin: var(--spacing-lg) 0 var(--spacing-md);">🎯 How to
+                    Use Money Mentor</h3>
+
+                <div
+                    style="background: rgba(15,23,42,0.9); padding: var(--spacing-lg); border-radius: 12px; border: 1px solid var(--color-border);">
+                    <div
+                        style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: var(--spacing-lg);">
                         <div>
-                            <div style="display: flex; align-items: center; gap: 12px; margin-bottom: var(--spacing-md);">
-                                <div style="width: 32px; height: 32px; background: linear-gradient(135deg, var(--color-primary), var(--color-primary-dark)); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-weight: 700;">1</div>
-                                <span style="color: var(--color-primary-light); font-weight: 600;">Take the Survey</span>
+                            <div
+                                style="display: flex; align-items: center; gap: 12px; margin-bottom: var(--spacing-md);">
+                                <div
+                                    style="width: 32px; height: 32px; background: linear-gradient(135deg, var(--color-primary), var(--color-primary-dark)); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-weight: 700;">
+                                    1</div>
+                                <span style="color: var(--color-primary-light); font-weight: 600;">Take the
+                                    Survey</span>
                             </div>
-                            <p style="color: var(--color-text-secondary); font-size: 13px;">Answer 20 questions to assess your financial knowledge and understand your money habits.</p>
+                            <p style="color: var(--color-text-secondary); font-size: 13px;">Answer 20 questions to
+                                assess your financial knowledge and understand your money habits.</p>
                         </div>
 
                         <div>
-                            <div style="display: flex; align-items: center; gap: 12px; margin-bottom: var(--spacing-md);">
-                                <div style="width: 32px; height: 32px; background: linear-gradient(135deg, var(--color-primary), var(--color-primary-dark)); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-weight: 700;">2</div>
-                                <span style="color: var(--color-primary-light); font-weight: 600;">Log Daily Expenses</span>
+                            <div
+                                style="display: flex; align-items: center; gap: 12px; margin-bottom: var(--spacing-md);">
+                                <div
+                                    style="width: 32px; height: 32px; background: linear-gradient(135deg, var(--color-primary), var(--color-primary-dark)); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-weight: 700;">
+                                    2</div>
+                                <span style="color: var(--color-primary-light); font-weight: 600;">Log Daily
+                                    Expenses</span>
                             </div>
-                            <p style="color: var(--color-text-secondary); font-size: 13px;">Track your daily spending in 5 categories to understand your spending patterns better.</p>
+                            <p style="color: var(--color-text-secondary); font-size: 13px;">Track your daily spending in
+                                5 categories to understand your spending patterns better.</p>
                         </div>
 
                         <div>
-                            <div style="display: flex; align-items: center; gap: 12px; margin-bottom: var(--spacing-md);">
-                                <div style="width: 32px; height: 32px; background: linear-gradient(135deg, var(--color-primary), var(--color-primary-dark)); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-weight: 700;">3</div>
-                                <span style="color: var(--color-primary-light); font-weight: 600;">Compare & Analyze</span>
+                            <div
+                                style="display: flex; align-items: center; gap: 12px; margin-bottom: var(--spacing-md);">
+                                <div
+                                    style="width: 32px; height: 32px; background: linear-gradient(135deg, var(--color-primary), var(--color-primary-dark)); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-weight: 700;">
+                                    3</div>
+                                <span style="color: var(--color-primary-light); font-weight: 600;">Compare &
+                                    Analyze</span>
                             </div>
-                            <p style="color: var(--color-text-secondary); font-size: 13px;">Compare your spending with ideal budgets for your city and get actionable insights.</p>
+                            <p style="color: var(--color-text-secondary); font-size: 13px;">Compare your spending with
+                                ideal budgets for your city and get actionable insights.</p>
                         </div>
 
                         <div>
-                            <div style="display: flex; align-items: center; gap: 12px; margin-bottom: var(--spacing-md);">
-                                <div style="width: 32px; height: 32px; background: linear-gradient(135deg, var(--color-primary), var(--color-primary-dark)); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-weight: 700;">4</div>
+                            <div
+                                style="display: flex; align-items: center; gap: 12px; margin-bottom: var(--spacing-md);">
+                                <div
+                                    style="width: 32px; height: 32px; background: linear-gradient(135deg, var(--color-primary), var(--color-primary-dark)); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-weight: 700;">
+                                    4</div>
                                 <span style="color: var(--color-primary-light); font-weight: 600;">View Profile</span>
                             </div>
-                            <p style="color: var(--color-text-secondary); font-size: 13px;">See your financial ranking, score, budget, and city info all in one personal dashboard.</p>
+                            <p style="color: var(--color-text-secondary); font-size: 13px;">See your financial ranking,
+                                score, budget, and city info all in one personal dashboard.</p>
                         </div>
 
                         <div>
-                            <div style="display: flex; align-items: center; gap: 12px; margin-bottom: var(--spacing-md);">
-                                <div style="width: 32px; height: 32px; background: linear-gradient(135deg, var(--color-primary), var(--color-primary-dark)); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-weight: 700;">5</div>
+                            <div
+                                style="display: flex; align-items: center; gap: 12px; margin-bottom: var(--spacing-md);">
+                                <div
+                                    style="width: 32px; height: 32px; background: linear-gradient(135deg, var(--color-primary), var(--color-primary-dark)); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-weight: 700;">
+                                    5</div>
                                 <span style="color: var(--color-primary-light); font-weight: 600;">Chat with AI</span>
                             </div>
-                            <p style="color: var(--color-text-secondary); font-size: 13px;">Ask Money Mentor AI any questions about budgeting, saving, or financial decisions.</p>
+                            <p style="color: var(--color-text-secondary); font-size: 13px;">Ask Money Mentor AI any
+                                questions about budgeting, saving, or financial decisions.</p>
                         </div>
 
                         <div>
-                            <div style="display: flex; align-items: center; gap: 12px; margin-bottom: var(--spacing-md);">
-                                <div style="width: 32px; height: 32px; background: linear-gradient(135deg, var(--color-primary), var(--color-primary-dark)); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-weight: 700;">6</div>
-                                <span style="color: var(--color-primary-light); font-weight: 600;">Improve & Retake</span>
+                            <div
+                                style="display: flex; align-items: center; gap: 12px; margin-bottom: var(--spacing-md);">
+                                <div
+                                    style="width: 32px; height: 32px; background: linear-gradient(135deg, var(--color-primary), var(--color-primary-dark)); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-weight: 700;">
+                                    6</div>
+                                <span style="color: var(--color-primary-light); font-weight: 600;">Improve &
+                                    Retake</span>
                             </div>
-                            <p style="color: var(--color-text-secondary); font-size: 13px;">Retake the survey after a month to track your progress and financial growth!</p>
+                            <p style="color: var(--color-text-secondary); font-size: 13px;">Retake the survey after a
+                                month to track your progress and financial growth!</p>
                         </div>
                     </div>
                 </div>
 
-                <h3 style="color: var(--color-primary-light); margin: var(--spacing-lg) 0 var(--spacing-md);">💡 Key Features</h3>
-                
+                <h3 style="color: var(--color-primary-light); margin: var(--spacing-lg) 0 var(--spacing-md);">💡 Key
+                    Features</h3>
+
                 <ul style="list-style: none; padding: 0;">
-                    <li style="padding: var(--spacing-md) 0; border-bottom: 1px solid var(--color-border); color: var(--color-text-secondary);">
-                        <span style="color: var(--color-primary);">✅</span> Real-life money scenarios tailored for Indian students
+                    <li
+                        style="padding: var(--spacing-md) 0; border-bottom: 1px solid var(--color-border); color: var(--color-text-secondary);">
+                        <span style="color: var(--color-primary);">✅</span> Real-life money scenarios tailored for
+                        Indian students
                     </li>
-                    <li style="padding: var(--spacing-md) 0; border-bottom: 1px solid var(--color-border); color: var(--color-text-secondary);">
+                    <li
+                        style="padding: var(--spacing-md) 0; border-bottom: 1px solid var(--color-border); color: var(--color-text-secondary);">
                         <span style="color: var(--color-primary);">✅</span> UPI & Digital payment safety tips included
                     </li>
-                    <li style="padding: var(--spacing-md) 0; border-bottom: 1px solid var(--color-border); color: var(--color-text-secondary);">
-                        <span style="color: var(--color-primary);">✅</span> City-wise budget analysis with personalized recommendations
+                    <li
+                        style="padding: var(--spacing-md) 0; border-bottom: 1px solid var(--color-border); color: var(--color-text-secondary);">
+                        <span style="color: var(--color-primary);">✅</span> City-wise budget analysis with personalized
+                        recommendations
                     </li>
-                    <li style="padding: var(--spacing-md) 0; border-bottom: 1px solid var(--color-border); color: var(--color-text-secondary);">
-                        <span style="color: var(--color-primary);">✅</span> 24/7 AI chatbot for instant financial guidance
+                    <li
+                        style="padding: var(--spacing-md) 0; border-bottom: 1px solid var(--color-border); color: var(--color-text-secondary);">
+                        <span style="color: var(--color-primary);">✅</span> 24/7 AI chatbot for instant financial
+                        guidance
                     </li>
-                    <li style="padding: var(--spacing-md) 0; border-bottom: 1px solid var(--color-border); color: var(--color-text-secondary);">
+                    <li
+                        style="padding: var(--spacing-md) 0; border-bottom: 1px solid var(--color-border); color: var(--color-text-secondary);">
                         <span style="color: var(--color-primary);">✅</span> 6-tier ranking system with detailed feedback
                     </li>
-                    <li style="padding: var(--spacing-md) 0; border-bottom: 1px solid var(--color-border); color: var(--color-text-secondary);">
-                        <span style="color: var(--color-primary);">✅</span> Track spending habits across 5 expense categories
+                    <li
+                        style="padding: var(--spacing-md) 0; border-bottom: 1px solid var(--color-border); color: var(--color-text-secondary);">
+                        <span style="color: var(--color-primary);">✅</span> Track spending habits across 5 expense
+                        categories
                     </li>
                     <li style="padding: var(--spacing-md) 0; color: var(--color-text-secondary);">
-                        <span style="color: var(--color-primary);">✅</span> Dark theme optimized for extended learning sessions
+                        <span style="color: var(--color-primary);">✅</span> Dark theme optimized for extended learning
+                        sessions
                     </li>
                 </ul>
             </div>
@@ -1014,34 +1148,39 @@
         <!-- GAMES SECTION -->
         <section id="games" class="section">
             <h1>🎮 Financial Games</h1>
-            <p style="color: var(--color-text-secondary); margin-bottom: var(--spacing-lg);">Learn by playing! Master financial skills through interactive games.</p>
-            
+            <p style="color: var(--color-text-secondary); margin-bottom: var(--spacing-lg);">Learn by playing! Master
+                financial skills through interactive games.</p>
+
             <div class="games-grid">
                 <div class="game-card" onclick="openBudgetGame()">
                     <div class="game-icon">💰</div>
                     <div class="game-title">Budget Challenge</div>
-                    <div class="game-description">Split monthly income into needs, wants and savings using the 50-30-20 rule.</div>
+                    <div class="game-description">Split monthly income into needs, wants and savings using the 50-30-20
+                        rule.</div>
                     <button class="game-button">Play Game</button>
                 </div>
 
                 <div class="game-card" onclick="openSavingsPriorityGame()">
                     <div class="game-icon">🛒</div>
                     <div class="game-title">Savings Priority Challenge</div>
-                    <div class="game-description">Balance income, choose priorities and wants with realistic product prices!</div>
+                    <div class="game-description">Balance income, choose priorities and wants with realistic product
+                        prices!</div>
                     <button class="game-button">Play Game</button>
                 </div>
 
                 <div class="game-card" onclick="openDebtGame()">
                     <div class="game-icon">📊</div>
                     <div class="game-title">Debt Master</div>
-                    <div class="game-description">Choose between snowball and avalanche strategy to crush debt smartly.</div>
+                    <div class="game-description">Choose between snowball and avalanche strategy to crush debt smartly.
+                    </div>
                     <button class="game-button">Play Game</button>
                 </div>
 
                 <div class="game-card" onclick="openSavingsGoalGame()">
                     <div class="game-icon">🎯</div>
                     <div class="game-title">Savings Goal Planner</div>
-                    <div class="game-description">Set a goal and calculate how many months it takes with compound interest.</div>
+                    <div class="game-description">Set a goal and calculate how many months it takes with compound
+                        interest.</div>
                     <button class="game-button">Play Game</button>
                 </div>
             </div>
@@ -1050,8 +1189,10 @@
                 <div class="game-content">
                     <button class="close-btn" onclick="closeBudgetGame()">&times;</button>
                     <h2>Budget Challenge</h2>
-                    <p style="color: var(--color-text-secondary); margin-bottom: 1rem;">Total monthly income: <strong>₹20,000</strong></p>
-                    <p style="font-size: 13px; color: var(--color-text-secondary);">Try to follow the 50% Needs, 30% Wants, 20% Savings rule.</p>
+                    <p style="color: var(--color-text-secondary); margin-bottom: 1rem;">Total monthly income:
+                        <strong>₹20,000</strong></p>
+                    <p style="font-size: 13px; color: var(--color-text-secondary);">Try to follow the 50% Needs, 30%
+                        Wants, 20% Savings rule.</p>
                     <div class="form-group">
                         <label>Needs (Rent, food, transport)</label>
                         <input type="number" id="budgetNeeds" placeholder="Suggested: ₹10,000">
@@ -1080,13 +1221,18 @@
                 <div class="game-content">
                     <button class="close-btn" onclick="closeDebtGame()">&times;</button>
                     <h2>Debt Master</h2>
-                    <p style="color: var(--color-text-secondary); font-size: 14px; margin-bottom: 1rem;">Example debts:<br>Credit Card: ₹30,000 @ 30% interest<br>Personal Loan: ₹50,000 @ 18% interest<br>Education Loan: ₹1,50,000 @ 10% interest</p>
+                    <p style="color: var(--color-text-secondary); font-size: 14px; margin-bottom: 1rem;">Example
+                        debts:<br>Credit Card: ₹30,000 @ 30% interest<br>Personal Loan: ₹50,000 @ 18%
+                        interest<br>Education Loan: ₹1,50,000 @ 10% interest</p>
                     <div class="quiz-card" style="margin-bottom: 0.75rem;">
                         <div class="quiz-question" style="margin-bottom: 0.75rem;">Which strategy will you use?</div>
                         <div class="quiz-options">
-                            <div class="quiz-option" onclick="selectDebtStrategy('snowball')">Debt Snowball - pay smallest amount first for motivation.</div>
-                            <div class="quiz-option" onclick="selectDebtStrategy('avalanche')">Debt Avalanche - pay highest interest first to save money.</div>
-                            <div class="quiz-option" onclick="selectDebtStrategy('balanced')">Balanced - mix of both methods.</div>
+                            <div class="quiz-option" onclick="selectDebtStrategy('snowball')">Debt Snowball - pay
+                                smallest amount first for motivation.</div>
+                            <div class="quiz-option" onclick="selectDebtStrategy('avalanche')">Debt Avalanche - pay
+                                highest interest first to save money.</div>
+                            <div class="quiz-option" onclick="selectDebtStrategy('balanced')">Balanced - mix of both
+                                methods.</div>
                         </div>
                     </div>
                     <div id="debtResult"></div>
@@ -1118,8 +1264,9 @@
         <!-- STUDY SECTION -->
         <section id="study" class="section">
             <h1>📚 Financial Study Hub</h1>
-            <p style="color: var(--color-text-secondary); margin-bottom: var(--spacing-lg);">Master 6 core financial concepts with interactive lessons and 5 MCQs each!</p>
-            
+            <p style="color: var(--color-text-secondary); margin-bottom: var(--spacing-lg);">Master 6 core financial
+                concepts with interactive lessons and 5 MCQs each!</p>
+
             <div class="games-grid">
                 <div class="game-card" onclick="openStudyModule(1)">
                     <div class="game-icon">💳</div>
@@ -1172,10 +1319,81 @@
             </div>
         </section>
 
+        <!-- CONNECTIONS SECTION -->
+        <section id="connections" class="section">
+            <h1>🤝 Connect with Finance Experts</h1>
+            <p style="color: var(--color-text-secondary); margin-bottom: var(--spacing-lg);">
+                Book sessions with verified finance mentors and professionals.
+            </p>
+
+            <div class="games-grid">
+                <div class="game-card">
+                    <div class="game-icon">👨‍💼</div>
+                    <div class="game-title">Karan Upasani - CFP</div>
+                    <div class="mentor-meta">💰 ₹500/hour | ⭐ 4.9/5 | 342 students</div>
+                    <div class="game-description">
+                        Certified Financial Planner. Retirement & long-term investing.
+                    </div>
+                    <button class="game-button" onclick="bookSession('Raj Patel', 500)">Book Now</button>
+                </div>
+
+                <div class="game-card">
+                    <div class="game-icon">👩‍💼</div>
+                    <div class="game-title">Tavishi Singh - Trading Expert</div>
+                    <div class="mentor-meta">💰 ₹400/hour | ⭐ 4.8/5 | 289 students</div>
+                    <div class="game-description">
+                        Short and long term trading strategies in Indian markets.
+                    </div>
+                    <button class="game-button" onclick="bookSession('Priya Singh', 400)">Book Now</button>
+                </div>
+
+                <div class="game-card">
+                    <div class="game-icon">👨‍🏫</div>
+                    <div class="game-title">Swanand Dongre - Budget Coach</div>
+                    <div class="mentor-meta">💰 ₹300/hour | ⭐ 4.7/5 | 156 students</div>
+                    <div class="game-description">
+                        Get control over budgeting, expenses and saving habits.
+                    </div>
+                    <button class="game-button" onclick="bookSession('Amit Kumar', 300)">Book Now</button>
+                </div>
+
+                <div class="game-card">
+                    <div class="game-icon">👩‍🎓</div>
+                    <div class="game-title"> Smita Shinde - Investment Advisor</div>
+                    <div class="mentor-meta">💰 ₹450/hour | ⭐ 4.9/5 | 421 students</div>
+                    <div class="game-description">
+                        Mutual funds, ETFs and diversified portfolio building.
+                    </div>
+                    <button class="game-button" onclick="bookSession('Neha Verma', 450)">Book Now</button>
+                </div>
+
+                <div class="game-card">
+                    <div class="game-icon">👨‍💻</div>
+                    <div class="game-title">Jaish Patel - Debt Manager</div>
+                    <div class="mentor-meta">💰 ₹350/hour | ⭐ 4.6/5 | 203 students</div>
+                    <div class="game-description">
+                        Debt restructuring, credit score repair, repayment plans.
+                    </div>
+                    <button class="game-button" onclick="bookSession('Vikram Singh', 350)">Book Now</button>
+                </div>
+
+                <div class="game-card">
+                    <div class="game-icon">👩‍⚖️</div>
+                    <div class="game-title">-Shaila Patil Tax Expert</div>
+                    <div class="mentor-meta">💰 ₹550/hour | ⭐ 4.8/5 | 378 students</div>
+                    <div class="game-description">
+                        Tax planning, saving schemes and compliance guidance.
+                    </div>
+                    <button class="game-button" onclick="bookSession('Sneha Mishra', 550)">Book Now</button>
+                </div>
+            </div>
+        </section>
+
         <!-- SURVEY SECTION -->
         <section id="survey" class="section">
             <h1>💡 Financial Understanding Survey</h1>
-            <p style="color: var(--color-text-secondary); margin-bottom: var(--spacing-lg);">Answer these 20 questions (10 MCQs + 10 "What-If" scenarios) to get your financial ranking and personalized insights</p>
+            <p style="color: var(--color-text-secondary); margin-bottom: var(--spacing-lg);">Answer these 20 questions
+                (10 MCQs + 10 "What-If" scenarios) to get your financial ranking and personalized insights</p>
 
             <div class="quiz-card" id="surveyContainer" style="max-height: 800px; overflow-y: auto;"></div>
             <div id="surveyResult"></div>
@@ -1184,7 +1402,8 @@
         <!-- DAILY SPEND SECTION -->
         <section id="daily" class="section">
             <h1>📊 Daily Expenses Tracker</h1>
-            <p style="color: var(--color-text-secondary); margin-bottom: var(--spacing-lg);">Log your daily expenses to get accurate comparison data</p>
+            <p style="color: var(--color-text-secondary); margin-bottom: var(--spacing-lg);">Log your daily expenses to
+                get accurate comparison data</p>
 
             <div class="quiz-card">
                 <div class="form-group">
@@ -1232,7 +1451,8 @@
         <!-- COMPARE SECTION -->
         <section id="compare" class="section">
             <h1>📈 Your Spending Analysis</h1>
-            <p style="color: var(--color-text-secondary); margin-bottom: var(--spacing-lg);">See how your spending compares to ideal budgets for your city</p>
+            <p style="color: var(--color-text-secondary); margin-bottom: var(--spacing-lg);">See how your spending
+                compares to ideal budgets for your city</p>
 
             <div class="compare-section">
                 <h2 style="color: var(--color-primary-light); margin-bottom: var(--spacing-lg);">📍 City Data</h2>
@@ -1261,7 +1481,8 @@
         <!-- PROFILE SECTION -->
         <section id="profile" class="section">
             <h1>👤 My Profile</h1>
-            <p style="color: var(--color-text-secondary); margin-bottom: var(--spacing-lg);">Your personal financial dashboard</p>
+            <p style="color: var(--color-text-secondary); margin-bottom: var(--spacing-lg);">Your personal financial
+                dashboard</p>
 
             <div class="profile-container">
                 <div class="profile-avatar">👨‍💼</div>
@@ -1302,7 +1523,8 @@
         </div>
         <div class="chatbot-messages" id="chatMessages"></div>
         <div class="chatbot-input-area">
-            <input type="text" class="chatbot-input" id="chatInput" placeholder="Ask me anything..." onkeypress="if(event.key==='Enter') sendMessage()">
+            <input type="text" class="chatbot-input" id="chatInput" placeholder="Ask me anything..."
+                onkeypress="if(event.key==='Enter') sendMessage()">
             <button class="chatbot-send" onclick="sendMessage()">Send</button>
         </div>
     </div>
@@ -1726,18 +1948,18 @@
         // Update Profile Stats
         function updateProfileStats() {
             document.getElementById('profileScore').textContent = surveyScore + '/100';
-            
+
             let rankingText = 'Not Tested';
             if (surveyScore >= 90) rankingText = '🏆 Financial Genius';
             else if (surveyScore >= 70) rankingText = '💚 Smart Spender';
             else if (surveyScore >= 50) rankingText = '📚 Learning Well';
             else if (surveyScore > 0) rankingText = '🌱 Just Starting';
-            
+
             document.getElementById('profileRanking').textContent = rankingText;
-            
+
             const total = Object.values(userExpenses).reduce((a, b) => a + b, 0);
             document.getElementById('profileBudget').textContent = '₹' + total;
-            
+
             if (selectedCity && cityData[selectedCity]) {
                 document.getElementById('profileCity').textContent = cityData[selectedCity].name;
             }
@@ -1987,27 +2209,27 @@
         // Savings Priority Game
         function openSavingsPriorityGame() {
             const container = document.getElementById('savingsPriorityContent');
-            
+
             const priorities = [
-                {name: 'Rice 5kg', price: 350, emoji: '🍚'},
-                {name: 'Dal 2kg', price: 280, emoji: '🟤'},
-                {name: 'Cooking Oil 1L', price: 180, emoji: '🫒'},
-                {name: 'Veggies 3kg', price: 150, emoji: '🥬'},
-                {name: 'Milk 5L', price: 250, emoji: '🥛'},
-                {name: 'Eggs 30', price: 120, emoji: '🥚'},
-                {name: 'Electricity Bill', price: 400, emoji: '⚡'},
-                {name: 'Mobile Recharge', price: 200, emoji: '📱'},
-                {name: 'Bus Pass', price: 500, emoji: '🚌'},
-                {name: 'Basic Clothes', price: 400, emoji: '👕'}
+                { name: 'Rice 5kg', price: 350, emoji: '🍚' },
+                { name: 'Dal 2kg', price: 280, emoji: '🟤' },
+                { name: 'Cooking Oil 1L', price: 180, emoji: '🫒' },
+                { name: 'Veggies 3kg', price: 150, emoji: '🥬' },
+                { name: 'Milk 5L', price: 250, emoji: '🥛' },
+                { name: 'Eggs 30', price: 120, emoji: '🥚' },
+                { name: 'Electricity Bill', price: 400, emoji: '⚡' },
+                { name: 'Mobile Recharge', price: 200, emoji: '📱' },
+                { name: 'Bus Pass', price: 500, emoji: '🚌' },
+                { name: 'Basic Clothes', price: 400, emoji: '👕' }
             ];
 
             const wants = [
-                {name: 'Movie Ticket', price: 250, emoji: '🎬'},
-                {name: 'Café Coffee', price: 180, emoji: '☕'},
-                {name: 'Gaming Recharge', price: 100, emoji: '🎮'},
-                {name: 'Casual Shoes', price: 800, emoji: '👟'},
-                {name: 'Dining Out', price: 450, emoji: '🍕'},
-                {name: 'New Headphones', price: 1200, emoji: '🎧'}
+                { name: 'Movie Ticket', price: 250, emoji: '🎬' },
+                { name: 'Café Coffee', price: 180, emoji: '☕' },
+                { name: 'Gaming Recharge', price: 100, emoji: '🎮' },
+                { name: 'Casual Shoes', price: 800, emoji: '👟' },
+                { name: 'Dining Out', price: 450, emoji: '🍕' },
+                { name: 'New Headphones', price: 1200, emoji: '🎧' }
             ];
 
             let income = 15000, savings = 0, prioritiesBudget = 0, wantsBudget = 0;
@@ -2214,14 +2436,14 @@
             prioritiesSlider.oninput = updateSp;
             wantsSlider.oninput = updateSp;
 
-            document.getElementById('spStartShopping').onclick = function() {
+            document.getElementById('spStartShopping').onclick = function () {
                 document.getElementById('spPrioritiesShopping').style.display = 'block';
                 document.getElementById('spWantsShopping').style.display = 'block';
                 updateCartTotals();
             };
 
             document.getElementById('spPlayAgainBtn').onclick = openSavingsPriorityGame;
-            
+
             document.getElementById('spPrioritiesProducts').parentElement.parentElement.addEventListener('click', handleAddClick);
             document.getElementById('spWantsProducts').parentElement.parentElement.addEventListener('click', handleAddClick);
 
@@ -2239,103 +2461,103 @@
             1: {
                 title: '💳 Budget & Emergency Fund',
                 lessons: [
-                    {title: 'What is a Budget?', content: 'A budget is a plan for your money. It lists your income (money coming in) and expenses (money going out). A good budget helps you:\n• Know where your money goes\n• Save for goals\n• Avoid overspending\n• Build an emergency fund'},
-                    {title: 'The 50-30-20 Rule', content: '50% for NEEDS (essential expenses like rent, food, bills)\n30% for WANTS (fun and entertainment)\n20% for SAVINGS (emergency fund and goals)\n\nExample: If you earn ₹10,000/month:\n• Needs: ₹5,000\n• Wants: ₹3,000\n• Savings: ₹2,000'},
-                    {title: 'Emergency Fund', content: 'An emergency fund is money saved for unexpected situations like:\n• Medical emergencies\n• Job loss\n• Car repairs\n• Family crisis\n\nGoal: Save 3-6 months of living expenses in a separate account. Start with small amounts - even ₹500/month helps!'},
-                    {title: 'Monthly Budget Steps', content: '1. Write down all sources of income\n2. List all expenses (rent, food, bills, etc.)\n3. Categorize: Needs, Wants, Savings\n4. Check if Needs ≤ 50%, Wants ≤ 30%, Savings ≥ 20%\n5. Adjust if needed\n6. Track actual spending vs. budget'},
-                    {title: 'Budget Mistakes to Avoid', content: '❌ Not tracking spending\n❌ Forgetting small daily expenses\n❌ Overspending on wants\n❌ No emergency savings\n❌ Using credit cards without a plan\n\n✅ Do: Review budget monthly, adjust based on reality, celebrate wins!'}
+                    { title: 'What is a Budget?', content: 'A budget is a plan for your money. It lists your income (money coming in) and expenses (money going out). A good budget helps you:\n• Know where your money goes\n• Save for goals\n• Avoid overspending\n• Build an emergency fund' },
+                    { title: 'The 50-30-20 Rule', content: '50% for NEEDS (essential expenses like rent, food, bills)\n30% for WANTS (fun and entertainment)\n20% for SAVINGS (emergency fund and goals)\n\nExample: If you earn ₹10,000/month:\n• Needs: ₹5,000\n• Wants: ₹3,000\n• Savings: ₹2,000' },
+                    { title: 'Emergency Fund', content: 'An emergency fund is money saved for unexpected situations like:\n• Medical emergencies\n• Job loss\n• Car repairs\n• Family crisis\n\nGoal: Save 3-6 months of living expenses in a separate account. Start with small amounts - even ₹500/month helps!' },
+                    { title: 'Monthly Budget Steps', content: '1. Write down all sources of income\n2. List all expenses (rent, food, bills, etc.)\n3. Categorize: Needs, Wants, Savings\n4. Check if Needs ≤ 50%, Wants ≤ 30%, Savings ≥ 20%\n5. Adjust if needed\n6. Track actual spending vs. budget' },
+                    { title: 'Budget Mistakes to Avoid', content: '❌ Not tracking spending\n❌ Forgetting small daily expenses\n❌ Overspending on wants\n❌ No emergency savings\n❌ Using credit cards without a plan\n\n✅ Do: Review budget monthly, adjust based on reality, celebrate wins!' }
                 ],
                 quiz: [
-                    {q: 'What does the 50% in the 50-30-20 rule cover?', opts: ['Wants', 'Needs', 'Savings', 'Investments'], ans: 1},
-                    {q: 'How many months of expenses should an emergency fund cover?', opts: ['1-2', '3-6', '6-12', '12-24'], ans: 1},
-                    {q: 'Which is a NEED?', opts: ['Movie', 'Game', 'Rent', 'Shopping'], ans: 2},
-                    {q: 'What should you do if your actual spending is more than budget?', opts: ['Ignore', 'Adjust budget', 'Save less', 'Borrow more'], ans: 1},
-                    {q: 'Best time to review your budget?', opts: ['Never', 'Yearly', 'Monthly', 'When in debt'], ans: 2}
+                    { q: 'What does the 50% in the 50-30-20 rule cover?', opts: ['Wants', 'Needs', 'Savings', 'Investments'], ans: 1 },
+                    { q: 'How many months of expenses should an emergency fund cover?', opts: ['1-2', '3-6', '6-12', '12-24'], ans: 1 },
+                    { q: 'Which is a NEED?', opts: ['Movie', 'Game', 'Rent', 'Shopping'], ans: 2 },
+                    { q: 'What should you do if your actual spending is more than budget?', opts: ['Ignore', 'Adjust budget', 'Save less', 'Borrow more'], ans: 1 },
+                    { q: 'Best time to review your budget?', opts: ['Never', 'Yearly', 'Monthly', 'When in debt'], ans: 2 }
                 ]
             },
             2: {
                 title: '🔐 Cards & Credit Score',
                 lessons: [
-                    {title: 'Debit vs Credit Cards', content: 'DEBIT CARD: Spends your own money immediately\n• Safer for beginners\n• No debt risk\n• No interest charges\n\nCREDIT CARD: Borrow money from bank\n• Pay back later (with interest if delayed)\n• Builds credit history\n• Rewards & cashback\n• Risk: High interest if you don\'t pay full bill'},
-                    {title: 'What is a Credit Score?', content: 'A number (300-900) showing how responsible you are with borrowed money:\n\n750-900: Excellent (loans approved easily)\n700-749: Good (easy approval)\n600-699: Average (may face rejections)\n<600: Poor (very hard to get loans)\n\nIt\'s built over years of managing credit responsibly.'},
-                    {title: 'How to Build Good Credit Score', content: '✅ Pay all bills on time (most important!)\n✅ Keep credit utilization low (use <30% of limit)\n✅ Have mix of credit types (card, loan, etc.)\n✅ Don\'t close old accounts\n✅ Check your credit report for errors\n✅ Don\'t apply for too many cards at once'},
-                    {title: 'Credit Card Mistakes', content: '❌ Missing payment deadlines\n❌ Maxing out credit limit\n❌ Making only minimum payments\n❌ Having too many cards\n❌ Ignoring credit report errors\n❌ Co-signing for others\n❌ Using cards for cash withdrawals (high fee)'},
-                    {title: 'Safe Card Usage Tips', content: '🔒 Never share CVV/OTP with anyone\n🔒 Use cards on secure websites only\n🔒 Check statement monthly for fraud\n🔒 Activate transaction alerts\n🔒 Use ATMs in safe locations\n🔒 Block card if lost\n🔒 Use strong passwords for online accounts'}
+                    { title: 'Debit vs Credit Cards', content: 'DEBIT CARD: Spends your own money immediately\n• Safer for beginners\n• No debt risk\n• No interest charges\n\nCREDIT CARD: Borrow money from bank\n• Pay back later (with interest if delayed)\n• Builds credit history\n• Rewards & cashback\n• Risk: High interest if you don\'t pay full bill' },
+                    { title: 'What is a Credit Score?', content: 'A number (300-900) showing how responsible you are with borrowed money:\n\n750-900: Excellent (loans approved easily)\n700-749: Good (easy approval)\n600-699: Average (may face rejections)\n<600: Poor (very hard to get loans)\n\nIt\'s built over years of managing credit responsibly.' },
+                    { title: 'How to Build Good Credit Score', content: '✅ Pay all bills on time (most important!)\n✅ Keep credit utilization low (use <30% of limit)\n✅ Have mix of credit types (card, loan, etc.)\n✅ Don\'t close old accounts\n✅ Check your credit report for errors\n✅ Don\'t apply for too many cards at once' },
+                    { title: 'Credit Card Mistakes', content: '❌ Missing payment deadlines\n❌ Maxing out credit limit\n❌ Making only minimum payments\n❌ Having too many cards\n❌ Ignoring credit report errors\n❌ Co-signing for others\n❌ Using cards for cash withdrawals (high fee)' },
+                    { title: 'Safe Card Usage Tips', content: '🔒 Never share CVV/OTP with anyone\n🔒 Use cards on secure websites only\n🔒 Check statement monthly for fraud\n🔒 Activate transaction alerts\n🔒 Use ATMs in safe locations\n🔒 Block card if lost\n🔒 Use strong passwords for online accounts' }
                 ],
                 quiz: [
-                    {q: 'Debit card uses money from where?', opts: ['Bank', 'Your account', 'Credit', 'Loan'], ans: 1},
-                    {q: 'Good credit score starts from:', opts: ['500', '600', '700', '800'], ans: 2},
-                    {q: 'What impacts credit score most?', opts: ['Income', 'Savings', 'On-time payments', 'Debit cards'], ans: 2},
-                    {q: 'Ideal credit utilization %:', opts: ['100%', '70%', '<30%', '50%'], ans: 2},
-                    {q: 'You should share CVV with:', opts: ['Friends', 'Family', 'No one', 'Bank staff'], ans: 2}
+                    { q: 'Debit card uses money from where?', opts: ['Bank', 'Your account', 'Credit', 'Loan'], ans: 1 },
+                    { q: 'Good credit score starts from:', opts: ['500', '600', '700', '800'], ans: 2 },
+                    { q: 'What impacts credit score most?', opts: ['Income', 'Savings', 'On-time payments', 'Debit cards'], ans: 2 },
+                    { q: 'Ideal credit utilization %:', opts: ['100%', '70%', '<30%', '50%'], ans: 2 },
+                    { q: 'You should share CVV with:', opts: ['Friends', 'Family', 'No one', 'Bank staff'], ans: 2 }
                 ]
             },
             3: {
                 title: '💵 Paychecks & Bills',
                 lessons: [
-                    {title: 'Understanding Your Paycheck', content: 'GROSS SALARY: Total salary before deductions\n\nDEDUCTIONS:\n• Income Tax (depends on income)\n• Employee Provident Fund (EPF)\n• Health Insurance\n• Professional Tax\n\nNET SALARY: Money you actually receive\n= Gross - All Deductions\n\nImportant: Always budget using NET salary, not gross!'},
-                    {title: 'Fixed vs Variable Expenses', content: 'FIXED EXPENSES (same every month):\n• Rent\n• Insurance\n• Loan EMI\n• Subscription services\n\nVARIABLE EXPENSES (change each month):\n• Food/Groceries\n• Transportation\n• Entertainment\n• Utilities (electricity, water)\n\nTip: Budget fixed first, then flexible expenses.'},
-                    {title: 'Bill Payment Strategy', content: '✅ Set automatic payments for fixed bills\n✅ Pay by due date to avoid penalties\n✅ Keep receipts as proof\n✅ Review bills for errors\n✅ Switch providers if prices too high\n✅ Combine bills if offered (saves admin)\n\nRemember: Late payments hurt credit score!'},
-                    {title: 'Money Transfers Safely', content: 'BANK TRANSFER:\n• Fastest & safest method\n• Need: Account number, IFSC code\n• UPI: Use @bankname format\n• Verify recipient before sending\n\nCASH TIPS:\n• Withdraw only needed amount\n• Keep in safe place\n• Don\'t carry large amounts\n• Use secure ATMs'},
-                    {title: 'Income Sources for Youth', content: 'Part-time job: ₹200-500/hour\nFreelancing: ₹500-5000+ per project\nOnline tutoring: ₹300-1000/hour\nContent creation: Varies widely\nInternships: ₹10,000-50,000/month\nGig work: ₹300-1000/day\n\nTip: Diversify income for stability!'}
+                    { title: 'Understanding Your Paycheck', content: 'GROSS SALARY: Total salary before deductions\n\nDEDUCTIONS:\n• Income Tax (depends on income)\n• Employee Provident Fund (EPF)\n• Health Insurance\n• Professional Tax\n\nNET SALARY: Money you actually receive\n= Gross - All Deductions\n\nImportant: Always budget using NET salary, not gross!' },
+                    { title: 'Fixed vs Variable Expenses', content: 'FIXED EXPENSES (same every month):\n• Rent\n• Insurance\n• Loan EMI\n• Subscription services\n\nVARIABLE EXPENSES (change each month):\n• Food/Groceries\n• Transportation\n• Entertainment\n• Utilities (electricity, water)\n\nTip: Budget fixed first, then flexible expenses.' },
+                    { title: 'Bill Payment Strategy', content: '✅ Set automatic payments for fixed bills\n✅ Pay by due date to avoid penalties\n✅ Keep receipts as proof\n✅ Review bills for errors\n✅ Switch providers if prices too high\n✅ Combine bills if offered (saves admin)\n\nRemember: Late payments hurt credit score!' },
+                    { title: 'Money Transfers Safely', content: 'BANK TRANSFER:\n• Fastest & safest method\n• Need: Account number, IFSC code\n• UPI: Use @bankname format\n• Verify recipient before sending\n\nCASH TIPS:\n• Withdraw only needed amount\n• Keep in safe place\n• Don\'t carry large amounts\n• Use secure ATMs' },
+                    { title: 'Income Sources for Youth', content: 'Part-time job: ₹200-500/hour\nFreelancing: ₹500-5000+ per project\nOnline tutoring: ₹300-1000/hour\nContent creation: Varies widely\nInternships: ₹10,000-50,000/month\nGig work: ₹300-1000/day\n\nTip: Diversify income for stability!' }
                 ],
                 quiz: [
-                    {q: 'You should budget using which salary?', opts: ['Gross', 'Net', 'Both', 'Depends'], ans: 1},
-                    {q: 'Rent is which type of expense?', opts: ['Variable', 'Fixed', 'Unexpected', 'Optional'], ans: 1},
-                    {q: 'Late bill payment affects:', opts: ['Nothing', 'Credit score', 'Income', 'Savings'], ans: 1},
-                    {q: 'Safest way to transfer money:', opts: ['Cash', 'Cheque', 'Bank/UPI', 'Hawala'], ans: 2},
-                    {q: 'UPI address format is:', opts: ['name@9876543210', 'name@bankname', 'name@upi', 'name-bank'], ans: 1}
+                    { q: 'You should budget using which salary?', opts: ['Gross', 'Net', 'Both', 'Depends'], ans: 1 },
+                    { q: 'Rent is which type of expense?', opts: ['Variable', 'Fixed', 'Unexpected', 'Optional'], ans: 1 },
+                    { q: 'Late bill payment affects:', opts: ['Nothing', 'Credit score', 'Income', 'Savings'], ans: 1 },
+                    { q: 'Safest way to transfer money:', opts: ['Cash', 'Cheque', 'Bank/UPI', 'Hawala'], ans: 2 },
+                    { q: 'UPI address format is:', opts: ['name@9876543210', 'name@bankname', 'name@upi', 'name-bank'], ans: 1 }
                 ]
             },
             4: {
                 title: '📈 Long-term Wealth',
                 lessons: [
-                    {title: 'Compound Interest Magic', content: 'COMPOUND INTEREST = "Interest on Interest"\n\nExample: ₹1,000 @ 10% for 10 years\n• Simple interest: ₹2,000 final\n• Compound interest: ₹2,594 final!\n\nFormula: A = P(1 + r/100)^n\n\nKey: START EARLY! Even small amounts grow huge over time due to compounding.'},
-                    {title: 'Stocks Basics', content: 'STOCK = Piece of ownership in a company\n• Buy at lower price, sell at higher price = profit\n• Receive dividends from company profits\n• Value fluctuates (high risk, high reward)\n\nHow to start:\n1. Open demat account\n2. Learn before investing\n3. Start with blue-chip stocks (safe)\n4. Invest long-term (5+ years)'},
-                    {title: 'Bonds & ETFs', content: 'BONDS: Loan to government/company\n• Fixed returns\n• Lower risk\n• Good for stable income\n\nETFs: Portfolio of many stocks\n• Diversified (lower risk)\n• Lower minimum investment\n• Easy to trade\n• Good for beginners\n\nMix bonds + stocks for balanced portfolio.'},
-                    {title: 'Mutual Funds Explained', content: 'MUTUAL FUND: Professional manages pool of money from many investors\n\nBENEFITS:\n• Professional management\n• Diversification\n• Low minimum investment\n• Various types (equity, debt, balanced)\n\nRISK: Market risk, management fees\n\nTip: SIP (Systematic Investment Plan) = invest monthly = builds discipline'},
-                    {title: 'Investment Safety', content: '❌ Avoid: Ponzi schemes, unknown brokers, get-rich-quick promises\n✅ Use: Registered brokers, known banks, SEBI-regulated platforms\n✅ Do: Research before investing, diversify, long-term thinking\n✅ Remember: Higher returns = Higher risk\n\nTypes to AVOID:\n• Unregistered investment schemes\n• Forex/Crypto scams\n• Unknown platforms'}
+                    { title: 'Compound Interest Magic', content: 'COMPOUND INTEREST = "Interest on Interest"\n\nExample: ₹1,000 @ 10% for 10 years\n• Simple interest: ₹2,000 final\n• Compound interest: ₹2,594 final!\n\nFormula: A = P(1 + r/100)^n\n\nKey: START EARLY! Even small amounts grow huge over time due to compounding.' },
+                    { title: 'Stocks Basics', content: 'STOCK = Piece of ownership in a company\n• Buy at lower price, sell at higher price = profit\n• Receive dividends from company profits\n• Value fluctuates (high risk, high reward)\n\nHow to start:\n1. Open demat account\n2. Learn before investing\n3. Start with blue-chip stocks (safe)\n4. Invest long-term (5+ years)' },
+                    { title: 'Bonds & ETFs', content: 'BONDS: Loan to government/company\n• Fixed returns\n• Lower risk\n• Good for stable income\n\nETFs: Portfolio of many stocks\n• Diversified (lower risk)\n• Lower minimum investment\n• Easy to trade\n• Good for beginners\n\nMix bonds + stocks for balanced portfolio.' },
+                    { title: 'Mutual Funds Explained', content: 'MUTUAL FUND: Professional manages pool of money from many investors\n\nBENEFITS:\n• Professional management\n• Diversification\n• Low minimum investment\n• Various types (equity, debt, balanced)\n\nRISK: Market risk, management fees\n\nTip: SIP (Systematic Investment Plan) = invest monthly = builds discipline' },
+                    { title: 'Investment Safety', content: '❌ Avoid: Ponzi schemes, unknown brokers, get-rich-quick promises\n✅ Use: Registered brokers, known banks, SEBI-regulated platforms\n✅ Do: Research before investing, diversify, long-term thinking\n✅ Remember: Higher returns = Higher risk\n\nTypes to AVOID:\n• Unregistered investment schemes\n• Forex/Crypto scams\n• Unknown platforms' }
                 ],
                 quiz: [
-                    {q: 'Compound interest means:', opts: ['Simple interest', 'Interest + interest', 'No interest', 'Negative interest'], ans: 1},
-                    {q: 'Stock represents:', opts: ['Debt', 'Ownership', 'Interest', 'Loan'], ans: 1},
-                    {q: 'Bonds are:', opts: ['High risk', 'Fixed returns', 'Stocks', 'Forex'], ans: 1},
-                    {q: 'ETF is:', opts: ['Single stock', 'Portfolio of stocks', 'Cryptocurrency', 'Real estate'], ans: 1},
-                    {q: 'Best minimum time for stock investing:', opts: ['1 month', '6 months', '1-2 years', '5+ years'], ans: 3}
+                    { q: 'Compound interest means:', opts: ['Simple interest', 'Interest + interest', 'No interest', 'Negative interest'], ans: 1 },
+                    { q: 'Stock represents:', opts: ['Debt', 'Ownership', 'Interest', 'Loan'], ans: 1 },
+                    { q: 'Bonds are:', opts: ['High risk', 'Fixed returns', 'Stocks', 'Forex'], ans: 1 },
+                    { q: 'ETF is:', opts: ['Single stock', 'Portfolio of stocks', 'Cryptocurrency', 'Real estate'], ans: 1 },
+                    { q: 'Best minimum time for stock investing:', opts: ['1 month', '6 months', '1-2 years', '5+ years'], ans: 3 }
                 ]
             },
             5: {
                 title: '⚠️ Financial Consequences',
                 lessons: [
-                    {title: 'Impact of Debt on Life', content: 'HIGH DEBT = HIGH INTEREST PAYMENTS\n\n₹1,00,000 debt @ 18% (credit card):\n• Monthly interest: ₹1,500\n• Annual interest: ₹18,000\n\nCONSEQUENCES:\n• Can\'t get loans/mortgages\n• Poor credit score for 7 years\n• Difficulty in job/rental approval\n• Stress & mental health impact\n• Wage garnishment in extreme cases\n\nBETTER: Borrow only when necessary!'},
-                    {title: 'Lifestyle Inflation Trap', content: 'LIFESTYLE INFLATION: Spending increases as income increases\n\nExample:\n• Earn ₹20,000 - save ₹5,000\n• Get raise to ₹30,000 - spend all ₹30,000!\n\nRESULT: More money but same stress, no savings!\n\nSOLUTION:\n• Increase savings with each raise\n• Keep expenses same as before\n• Invest the raise amount\n• Avoid \"keeping up with friends\"'},
-                    {title: 'Impulse Spending Cost', content: 'DAILY IMPULSE SPENDING:\n• ₹100 daily = ₹3,000/month = ₹36,000/year\n\nOver 10 years without investing:\n• ₹3,60,000 gone!\n\nOver 10 years WITH investing (10% interest):\n• Could become ₹5,86,000!\n\nTIP: 24-hour rule - wait before buying!'},
-                    {title: 'Ignoring Health Insurance Risk', content: 'NO HEALTH INSURANCE = FINANCIAL DISASTER\n\nMedical costs in India:\n• Normal illness: ₹10,000-50,000\n• Surgery: ₹1-5,00,000+\n• Cancer treatment: ₹10-20,00,000+\n\nWITH INSURANCE:\n• Minimal out-of-pocket\n• Medical care without debt\n• Peace of mind\n\nGET: Health insurance early (cheaper premiums)'},
-                    {title: 'Procrastination Costs', content: 'DELAYING FINANCIAL DECISIONS = COSTLY\n\nExample: Not starting investments at 20 vs 25\n• Start at 20: ₹1,00,000/year for 45 years\n• Start at 25: ₹1,00,000/year for 40 years\n\nDifference: ₹50,00,000+!\n\nLESSION: Time value of money\n✅ Start saving/investing NOW\n✅ Every year counts\n✅ Small early investment > Large late investment'}
+                    { title: 'Impact of Debt on Life', content: 'HIGH DEBT = HIGH INTEREST PAYMENTS\n\n₹1,00,000 debt @ 18% (credit card):\n• Monthly interest: ₹1,500\n• Annual interest: ₹18,000\n\nCONSEQUENCES:\n• Can\'t get loans/mortgages\n• Poor credit score for 7 years\n• Difficulty in job/rental approval\n• Stress & mental health impact\n• Wage garnishment in extreme cases\n\nBETTER: Borrow only when necessary!' },
+                    { title: 'Lifestyle Inflation Trap', content: 'LIFESTYLE INFLATION: Spending increases as income increases\n\nExample:\n• Earn ₹20,000 - save ₹5,000\n• Get raise to ₹30,000 - spend all ₹30,000!\n\nRESULT: More money but same stress, no savings!\n\nSOLUTION:\n• Increase savings with each raise\n• Keep expenses same as before\n• Invest the raise amount\n• Avoid \"keeping up with friends\"' },
+                    { title: 'Impulse Spending Cost', content: 'DAILY IMPULSE SPENDING:\n• ₹100 daily = ₹3,000/month = ₹36,000/year\n\nOver 10 years without investing:\n• ₹3,60,000 gone!\n\nOver 10 years WITH investing (10% interest):\n• Could become ₹5,86,000!\n\nTIP: 24-hour rule - wait before buying!' },
+                    { title: 'Ignoring Health Insurance Risk', content: 'NO HEALTH INSURANCE = FINANCIAL DISASTER\n\nMedical costs in India:\n• Normal illness: ₹10,000-50,000\n• Surgery: ₹1-5,00,000+\n• Cancer treatment: ₹10-20,00,000+\n\nWITH INSURANCE:\n• Minimal out-of-pocket\n• Medical care without debt\n• Peace of mind\n\nGET: Health insurance early (cheaper premiums)' },
+                    { title: 'Procrastination Costs', content: 'DELAYING FINANCIAL DECISIONS = COSTLY\n\nExample: Not starting investments at 20 vs 25\n• Start at 20: ₹1,00,000/year for 45 years\n• Start at 25: ₹1,00,000/year for 40 years\n\nDifference: ₹50,00,000+!\n\nLESSION: Time value of money\n✅ Start saving/investing NOW\n✅ Every year counts\n✅ Small early investment > Large late investment' }
                 ],
                 quiz: [
-                    {q: 'High debt impacts:', opts: ['Nothing', 'Credit score', 'Loan chances', 'All of above'], ans: 3},
-                    {q: 'Lifestyle inflation means:', opts: ['Rising prices', 'Higher spending with higher income', 'Less savings', 'Job loss'], ans: 1},
-                    {q: 'Saving ₹100 daily for 10 years without investing ≈:', opts: ['₹3,00,000', '₹3,60,000', '₹5,00,000', '₹10,00,000'], ans: 1},
-                    {q: 'Health insurance is:', opts: ['Optional', 'Waste of money', 'Essential', 'Only for rich'], ans: 2},
-                    {q: 'Procrastinating investment by 5 years costs:', opts: ['Nothing', 'Little', 'Millions', 'Depends'], ans: 2}
+                    { q: 'High debt impacts:', opts: ['Nothing', 'Credit score', 'Loan chances', 'All of above'], ans: 3 },
+                    { q: 'Lifestyle inflation means:', opts: ['Rising prices', 'Higher spending with higher income', 'Less savings', 'Job loss'], ans: 1 },
+                    { q: 'Saving ₹100 daily for 10 years without investing ≈:', opts: ['₹3,00,000', '₹3,60,000', '₹5,00,000', '₹10,00,000'], ans: 1 },
+                    { q: 'Health insurance is:', opts: ['Optional', 'Waste of money', 'Essential', 'Only for rich'], ans: 2 },
+                    { q: 'Procrastinating investment by 5 years costs:', opts: ['Nothing', 'Little', 'Millions', 'Depends'], ans: 2 }
                 ]
             },
             6: {
                 title: '🧠 Smart Money Decisions',
                 lessons: [
-                    {title: 'Decision-Making Framework', content: 'Before buying, ask:\n\n1. NEED or WANT?\n2. Can I afford it RIGHT NOW (not future)?\n3. Will I use it regularly?\n4. Is there a cheaper alternative?\n5. Does it align with my goals?\n6. Would future me regret this?\n\nIf you answer NO to most → DON\'T BUY\n\nThis single practice can save ₹100,000+/year!'},
-                    {title: 'Goals Setting Strategy', content: 'GOOD GOALS ARE SMART:\nS - Specific (exact amount, date)\nM - Measurable (track progress)\nA - Achievable (realistic)\nR - Relevant (matters to you)\nT - Time-bound (deadline)\n\nExample:\n❌ "Save more money"\n✅ "Save ₹25,000 by Dec 2025 for laptop"\n\nBREAK into: Monthly (₹2,083), Weekly (₹480), Daily (₹68)'},
-                    {title: 'Negotiation Skills', content: 'Everything is negotiable:\n\nRENT:\n• Research market rate\n• Offer 10% less\n• Compare properties\n• Negotiate lease terms\n\nSALARY:\n• Research industry rate\n• Build strong case\n• Ask for 10-15% more\n• Negotiate benefits too\n\nOTHER:\n• Insurance premiums\n• Utility bills\n• Subscription prices\n• Service charges\n\nTIP: Professional tone wins!'},
-                    {title: 'Financial Literacy Habits', content: '📚 MONTHLY HABITS:\n• Review bank statement\n• Track spending vs budget\n• Pay bills on time\n• Update financial goals\n\n📚 QUARTERLY HABITS:\n• Check credit report\n• Review investments\n• Assess savings goal progress\n• Plan for next quarter\n\n📚 YEARLY HABITS:\n• File tax returns\n• Review insurance policies\n• Rebalance investments\n• Set new financial goals\n\nCONSISTENCY > Perfection!'},
-                    {title: 'Money Mindset Shift', content: 'FROM:\n❌ "I\'ll start saving when I earn more"\n❌ "Money is complicated"\n❌ "I\'m bad with money"\n❌ "Investing is risky"\n\nTO:\n✅ "Save something NOW, no matter amount"\n✅ "Money is a skill I can learn"\n✅ "I\'m improving my money habits"\n✅ "Not investing is riskier (inflation)"\n\nRemember: Everyone starts somewhere. YOU CAN DO THIS! 💪'}
+                    { title: 'Decision-Making Framework', content: 'Before buying, ask:\n\n1. NEED or WANT?\n2. Can I afford it RIGHT NOW (not future)?\n3. Will I use it regularly?\n4. Is there a cheaper alternative?\n5. Does it align with my goals?\n6. Would future me regret this?\n\nIf you answer NO to most → DON\'T BUY\n\nThis single practice can save ₹100,000+/year!' },
+                    { title: 'Goals Setting Strategy', content: 'GOOD GOALS ARE SMART:\nS - Specific (exact amount, date)\nM - Measurable (track progress)\nA - Achievable (realistic)\nR - Relevant (matters to you)\nT - Time-bound (deadline)\n\nExample:\n❌ "Save more money"\n✅ "Save ₹25,000 by Dec 2025 for laptop"\n\nBREAK into: Monthly (₹2,083), Weekly (₹480), Daily (₹68)' },
+                    { title: 'Negotiation Skills', content: 'Everything is negotiable:\n\nRENT:\n• Research market rate\n• Offer 10% less\n• Compare properties\n• Negotiate lease terms\n\nSALARY:\n• Research industry rate\n• Build strong case\n• Ask for 10-15% more\n• Negotiate benefits too\n\nOTHER:\n• Insurance premiums\n• Utility bills\n• Subscription prices\n• Service charges\n\nTIP: Professional tone wins!' },
+                    { title: 'Financial Literacy Habits', content: '📚 MONTHLY HABITS:\n• Review bank statement\n• Track spending vs budget\n• Pay bills on time\n• Update financial goals\n\n📚 QUARTERLY HABITS:\n• Check credit report\n• Review investments\n• Assess savings goal progress\n• Plan for next quarter\n\n📚 YEARLY HABITS:\n• File tax returns\n• Review insurance policies\n• Rebalance investments\n• Set new financial goals\n\nCONSISTENCY > Perfection!' },
+                    { title: 'Money Mindset Shift', content: 'FROM:\n❌ "I\'ll start saving when I earn more"\n❌ "Money is complicated"\n❌ "I\'m bad with money"\n❌ "Investing is risky"\n\nTO:\n✅ "Save something NOW, no matter amount"\n✅ "Money is a skill I can learn"\n✅ "I\'m improving my money habits"\n✅ "Not investing is riskier (inflation)"\n\nRemember: Everyone starts somewhere. YOU CAN DO THIS! 💪' }
                 ],
                 quiz: [
-                    {q: 'Before buying, most important question:', opts: ['Price', 'Need or want?', 'Brand', 'Color'], ans: 1},
-                    {q: 'SMART goal means:', opts: ['Expensive', 'Specific & measurable', 'Hard', 'Vague'], ans: 1},
-                    {q: 'You can negotiate:', opts: ['Only salary', 'Everything', 'Nothing', 'Only big items'], ans: 1},
-                    {q: 'Checking credit report frequency:', opts: ['Never', 'Yearly', 'Quarterly', 'Monthly'], ans: 1},
-                    {q: 'Best money mindset:', opts: ['Wait to earn more', 'Save NOW start small', 'Money is complicated', 'Avoid all investing'], ans: 1}
+                    { q: 'Before buying, most important question:', opts: ['Price', 'Need or want?', 'Brand', 'Color'], ans: 1 },
+                    { q: 'SMART goal means:', opts: ['Expensive', 'Specific & measurable', 'Hard', 'Vague'], ans: 1 },
+                    { q: 'You can negotiate:', opts: ['Only salary', 'Everything', 'Nothing', 'Only big items'], ans: 1 },
+                    { q: 'Checking credit report frequency:', opts: ['Never', 'Yearly', 'Quarterly', 'Monthly'], ans: 1 },
+                    { q: 'Best money mindset:', opts: ['Wait to earn more', 'Save NOW start small', 'Money is complicated', 'Avoid all investing'], ans: 1 }
                 ]
             }
         };
@@ -2358,7 +2580,7 @@
             mod.quiz.forEach((q, qIdx) => {
                 html += `
                     <div class="quiz-card">
-                        <div class="quiz-question" style="margin-bottom: 0.75rem;">Q${qIdx+1}. ${q.q}</div>
+                        <div class="quiz-question" style="margin-bottom: 0.75rem;">Q${qIdx + 1}. ${q.q}</div>
                         <div class="quiz-options">
                             ${q.opts.map((opt, optIdx) => `
                                 <label class="quiz-option">
@@ -2417,6 +2639,147 @@
             gameState.completedLessons++;
             updateDashboard();
         }
+        const mentorsDatabase = [
+            { id: 1, name: 'Karan Upasani', title: 'CFP', icon: '👨‍💼', hourlyRate: 500, rating: 4.9, students: 342, specialty: 'Certified Financial Planner. Retirement & long-term investing.', experience: '12+ years', sessions: 0, totalEarnings: 0 },
+            { id: 2, name: 'Tavishi Singh', title: 'Trading Expert', icon: '👩‍💼', hourlyRate: 400, rating: 4.8, students: 289, specialty: 'Short and long term trading strategies in Indian markets.', experience: '8+ years', sessions: 0, totalEarnings: 0 },
+            { id: 3, name: 'Swanand Dongre', title: 'Budget Coach', icon: '👨‍🏫', hourlyRate: 300, rating: 4.7, students: 156, specialty: 'Get control over budgeting, expenses and saving habits.', experience: '6+ years', sessions: 0, totalEarnings: 0 },
+            { id: 4, name: 'Smita Shinde', title: 'Investment Advisor', icon: '👩‍🎓', hourlyRate: 450, rating: 4.9, students: 421, specialty: 'Mutual funds, ETFs and diversified portfolio building.', experience: '10+ years', sessions: 0, totalEarnings: 0 },
+            { id: 5, name: 'Jaish Patel', title: 'Debt Manager', icon: '👨‍💻', hourlyRate: 350, rating: 4.6, students: 203, specialty: 'Debt restructuring, credit score repair, repayment plans.', experience: '7+ years', sessions: 0, totalEarnings: 0 },
+            { id: 6, name: 'Shaila Patil', title: 'Tax Expert', icon: '👩‍⚖️', hourlyRate: 550, rating: 4.8, students: 378, specialty: 'Tax planning, saving schemes and compliance guidance.', experience: '11+ years', sessions: 0, totalEarnings: 0 }
+        ];
+
+        const bookingState = {
+            bookedSessions: [],
+            userBalance: 50000,
+            totalSpent: 0,
+            upcomingSessions: [],
+            pastSessions: []
+        };
+
+        function bookSession(mentorId) {
+            const mentor = mentorsDatabase.find(m => m.id === mentorId);
+            if (!mentor) { showNotification('Mentor not found!', 'error'); return; }
+            if (bookingState.userBalance < mentor.hourlyRate) { showNotification('Insufficient balance! You need ₹' + mentor.hourlyRate + ' but have ₹' + bookingState.userBalance, 'error'); return; }
+            createBookingModal(mentor);
+        }
+
+        function createBookingModal(mentor) {
+            const existingModal = document.getElementById('bookingModal');
+            if (existingModal) existingModal.remove();
+            const todayDate = new Date().toISOString().split('T')[0];
+            const modal = document.createElement('div');
+            modal.id = 'bookingModal';
+            modal.className = 'game-modal active';
+            modal.innerHTML = '<div class="game-content"><button class="close-btn" onclick="closeBookingModal()">×</button><h2>Book Session with ' + mentor.name + '</h2><div style="background: var(--color-border); padding: 1rem; border-radius: 12px; margin: 1rem 0;"><div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 1rem;"><div><div style="font-size: 12px; color: var(--color-text-secondary);">Hourly Rate</div><div style="font-size: 24px; font-weight: bold; color: var(--color-primary-light);">₹' + mentor.hourlyRate + '</div></div><div><div style="font-size: 12px; color: var(--color-text-secondary);">Rating</div><div style="font-size: 24px; font-weight: bold; color: var(--color-accent);">⭐ ' + mentor.rating + '/5</div></div></div><div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;"><div><div style="font-size: 12px; color: var(--color-text-secondary);">Experience</div><div style="font-size: 16px; font-weight: bold;">' + mentor.experience + '</div></div><div><div style="font-size: 12px; color: var(--color-text-secondary);">Students</div><div style="font-size: 16px; font-weight: bold;">' + mentor.students + ' students</div></div></div></div><form id="bookingForm" onsubmit="confirmBooking(event, ' + mentor.id + ')"><div class="form-group"><label>Select Date</label><input type="date" id="sessionDate" required min="' + todayDate + '"></div><div class="form-group"><label>Select Time Slot</label><select id="sessionTime" required><option value="">Choose time...</option><option value="09:00">09:00 AM</option><option value="10:00">10:00 AM</option><option value="11:00">11:00 AM</option><option value="14:00">02:00 PM</option><option value="15:00">03:00 PM</option><option value="16:00">04:00 PM</option><option value="17:00">05:00 PM</option><option value="18:00">06:00 PM</option></select></div><div class="form-group"><label>Duration (Hours)</label><select id="sessionDuration" required onchange="updateSessionCost(' + mentor.id + ')"><option value="">Select duration...</option><option value="1">1 Hour</option><option value="2">2 Hours</option><option value="3">3 Hours</option></select></div><div class="form-group"><label>Session Topic</label><textarea id="sessionTopic" placeholder="What would you like to discuss?" required></textarea></div><div style="background: var(--color-border); padding: 1rem; border-radius: 12px; margin: 1rem 0;"><div style="display: flex; justify-content: space-between; margin-bottom: 0.5rem;"><span>Base Cost (₹' + mentor.hourlyRate + '/hour)</span><span id="baseCost">₹0</span></div><div style="display: flex; justify-content: space-between; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 0.5rem;"><span style="font-weight: bold;">Total Cost</span><span id="totalCost" style="font-weight: bold; color: var(--color-primary-light);">₹0</span></div></div><button type="submit" class="btn-primary">Confirm Booking</button></form></div>';
+            document.body.appendChild(modal);
+            document.getElementById('sessionDate').valueAsDate = new Date();
+        }
+
+        function updateSessionCost(mentorId) {
+            const durationSelect = document.getElementById('sessionDuration');
+            const duration = parseInt(durationSelect.value) || 0;
+            const mentor = mentorsDatabase.find(m => m.id === mentorId);
+            if (!mentor || !duration) return;
+            const baseCost = mentor.hourlyRate * duration;
+            document.getElementById('baseCost').textContent = '₹' + baseCost;
+            document.getElementById('totalCost').textContent = '₹' + baseCost;
+        }
+
+        function confirmBooking(event, mentorId) {
+            event.preventDefault();
+            const mentor = mentorsDatabase.find(m => m.id === mentorId);
+            const date = document.getElementById('sessionDate').value;
+            const time = document.getElementById('sessionTime').value;
+            const duration = parseInt(document.getElementById('sessionDuration').value);
+            const topic = document.getElementById('sessionTopic').value;
+            if (!date || !time || !duration || !topic) { showNotification('Please fill all fields!', 'error'); return; }
+            const totalCost = mentor.hourlyRate * duration;
+            if (bookingState.userBalance < totalCost) { showNotification('Insufficient balance!', 'error'); return; }
+            bookingState.userBalance -= totalCost;
+            bookingState.totalSpent += totalCost;
+            mentor.sessions += 1;
+            mentor.totalEarnings += totalCost;
+            const booking = { id: bookingState.bookedSessions.length + 1, mentorId: mentorId, mentorName: mentor.name, date: date, time: time, duration: duration, topic: topic, cost: totalCost, status: 'confirmed', bookingTime: new Date().toLocaleString() };
+            bookingState.bookedSessions.push(booking);
+            bookingState.upcomingSessions.push(booking);
+            showNotification('✅ Session booked with ' + mentor.name + '! Duration: ' + duration + ' hour(s) - Total: ₹' + totalCost, 'success');
+            if (typeof addXP !== 'undefined') addXP(75);
+            closeBookingModal();
+            if (typeof updateDashboard !== 'undefined') updateDashboard();
+            displayBookings();
+        }
+
+        function closeBookingModal() {
+            const modal = document.getElementById('bookingModal');
+            if (modal) { modal.classList.remove('active'); setTimeout(function () { if (modal.parentNode) modal.remove(); }, 300); }
+        }
+
+        function displayBookings() {
+            const bookingsDiv = document.getElementById('userBookings');
+            if (!bookingsDiv) return;
+            if (bookingState.bookedSessions.length === 0) { bookingsDiv.innerHTML = '<p style="text-align: center; color: var(--color-text-secondary);">No sessions booked yet. Start your learning journey!</p>'; return; }
+            let html = '<h3 style="margin-bottom: 1rem; color: var(--color-primary-light);">📅 Your Booked Sessions</h3>';
+            bookingState.bookedSessions.forEach(function (booking, index) {
+                html += '<div style="background: var(--color-border); padding: 1rem; border-radius: 12px; margin-bottom: 1rem; border-left: 4px solid var(--color-primary);"><div style="display: flex; justify-content: space-between; align-items: center;"><div><div style="font-weight: bold; margin-bottom: 0.5rem;">' + booking.mentorName + '</div><div style="font-size: 12px; color: var(--color-text-secondary);">📅 ' + booking.date + ' at ' + booking.time + ' | ⏱️ ' + booking.duration + ' hour(s)</div><div style="font-size: 12px; color: var(--color-text-secondary); margin-top: 0.5rem;">Topic: ' + booking.topic + '</div></div><div style="text-align: right;"><div style="font-size: 20px; font-weight: bold; color: var(--color-accent);">₹' + booking.cost + '</div><span style="display: inline-block; background: var(--color-success); color: white; padding: 2px 8px; border-radius: 12px; font-size: 10px; margin-top: 0.5rem;">' + booking.status + '</span><button onclick="cancelBooking(' + index + ')" style="display: block; margin-top: 0.5rem; background: var(--color-warning); color: white; border: none; padding: 4px 12px; border-radius: 6px; cursor: pointer; font-size: 11px;">Cancel</button></div></div></div>';
+            });
+            bookingsDiv.innerHTML = html;
+        }
+
+        function cancelBooking(index) {
+            const booking = bookingState.bookedSessions[index];
+            if (!confirm('Are you sure you want to cancel this session?')) return;
+            const refund = Math.floor(booking.cost * 0.8);
+            bookingState.userBalance += refund;
+            bookingState.totalSpent -= booking.cost;
+            const mentor = mentorsDatabase.find(m => m.id === booking.mentorId);
+            if (mentor) { mentor.sessions -= 1; mentor.totalEarnings -= booking.cost; }
+            bookingState.bookedSessions.splice(index, 1);
+            bookingState.upcomingSessions = bookingState.upcomingSessions.filter(function (_, i) { return i !== index; });
+            showNotification('✅ Booking cancelled! Refund: ₹' + refund, 'success');
+            if (typeof updateDashboard !== 'undefined') updateDashboard();
+            displayBookings();
+            updateUserBookingsDashboard();
+        }
+
+        function showNotification(message, type) {
+            if (typeof type === 'undefined') type = 'success';
+            const notif = document.createElement('div');
+            notif.className = 'notification';
+            notif.style.borderLeftColor = type === 'error' ? 'var(--color-warning)' : 'var(--color-primary)';
+            notif.textContent = message;
+            document.body.appendChild(notif);
+            setTimeout(function () { notif.remove(); }, 3000);
+        }
+
+        function updateUserBookingsDashboard() {
+            const dashboardDiv = document.getElementById('userBookingsDashboard');
+            if (!dashboardDiv) return;
+            const mostBookedMentor = getMostBookedMentor();
+            dashboardDiv.innerHTML = '<div class="dashboard-grid" style="margin-top: 1rem;"><div class="stat-card"><div class="stat-label">Sessions Booked</div><div class="stat-value">' + bookingState.bookedSessions.length + '</div><div class="stat-change">Learn from experts</div></div><div class="stat-card"><div class="stat-label">Total Spent</div><div class="stat-value">₹' + bookingState.totalSpent + '</div><div class="stat-change">Investment in learning</div></div><div class="stat-card"><div class="stat-label">Account Balance</div><div class="stat-value">₹' + bookingState.userBalance + '</div><div class="stat-change">Available for booking</div></div><div class="stat-card"><div class="stat-label">Top Mentor</div><div class="stat-value">' + mostBookedMentor + '</div><div class="stat-change">Your favorite</div></div></div>';
+        }
+
+        function getMostBookedMentor() {
+            if (bookingState.bookedSessions.length === 0) return 'None';
+            const mentorCount = {};
+            bookingState.bookedSessions.forEach(function (b) { mentorCount[b.mentorName] = (mentorCount[b.mentorName] || 0) + 1; });
+            let topMentor = Object.keys(mentorCount)[0];
+            Object.keys(mentorCount).forEach(function (name) { if (mentorCount[name] > mentorCount[topMentor]) { topMentor = name; } });
+            return topMentor;
+        }
+
+        function initializeConnections() {
+            const connectionsSection = document.getElementById('connections');
+            if (!connectionsSection) return;
+            if (!document.getElementById('userBookingsDashboard')) { connectionsSection.insertAdjacentHTML('afterbegin', '<h2 style="margin-top: 0; margin-bottom: 1rem;">📊 Your Bookings Dashboard</h2><div id="userBookingsDashboard"></div>'); }
+            if (!document.getElementById('userBookings')) { const bookingsContainer = document.createElement('div'); bookingsContainer.id = 'userBookings'; bookingsContainer.style.marginTop = '2rem'; connectionsSection.appendChild(bookingsContainer); }
+            updateUserBookingsDashboard();
+            displayBookings();
+        }
+
+        document.addEventListener('DOMContentLoaded', function () { initializeConnections(); });
+    </script>
+
     </script>
 </body>
+
 </html>
